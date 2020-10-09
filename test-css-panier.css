@@ -1,0 +1,169 @@
+* {
+    margin: 0;
+    padding : 0;
+    box-sizing: border-box;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+
+
+
+.container{
+    display : flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 50px;
+    padding-bottom: 100px;
+}
+
+.image{
+    margin-right: 20px;
+    margin-left: 20px;
+    position: relative;
+    overflow: hidden;
+}
+
+.add-panier{
+    position: absolute;
+    width: 100%;
+    background-color: darkgrey;
+    transition: all 0.3s ease-in-out;
+    opacity: 0;
+    color: brown;
+    cursor: pointer;
+    text-align: center;
+}
+
+.image:hover .panier1,
+.image:hover .panier2,
+.image:hover .panier3{
+    bottom : 48px;
+    opacity: 1;
+    padding : 10px;
+    text-decoration : none;
+}
+
+
+#zone_meteo1, 
+#zone_meteo2, 
+#zone_meteo3{
+    position: absolute;
+    width: 100%;
+    text-align: left;
+    margin-top: 5px;
+    margin-left: 5px;
+}
+
+
+/*------------------PAGE PANIER --------------------------------*/
+
+.produits-container{
+    max-width: 650px;
+    justify-content: space-around;
+    margin: 0 auto;
+    margin-top: 50px;
+
+    
+}
+.produits-container ion-icon{
+    font-size: 25px;
+    color: blue;
+    margin-left: 10px;
+    margin-right: 10px;
+    cursor: pointer;
+}
+.produits-header{
+    width: 100%;
+    max-width: 650px;
+    display: flex;
+    justify-content: flex-start;
+    border-bottom: 4px solid gainsboro;
+    margin : 0 auto ;
+
+}
+
+.titre-produits{
+    width: 45%;
+
+}
+
+div.prix{
+    width: 15%;
+    border-bottom: 1px solid gainsboro;
+    display: flex;
+    align-items: center;
+}
+
+div.total{
+    width: 10%;
+    border-bottom: 1px solid gainsboro;
+    display: flex;
+    align-items: center;
+}
+
+div.quantite{
+    width: 30%;
+    border-bottom: 1px solid gainsboro;
+    display: flex;
+    align-items: center;
+}
+
+
+.prix{
+    width: 15%;
+    display: flex;
+    align-items: center;
+}
+
+.total{
+    width: 10%;
+    display: flex;
+    align-items: center;
+}
+
+.quantite{
+    width: 30%;
+    display: flex;
+    align-items: center;
+}
+
+.produits{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.produit{
+    width : 45% ;
+    display : flex;
+    justify-self: space-around ;
+    align-self: center;
+    padding: 10px 0;
+    border-bottom: 1px solid gainsboro;
+}
+
+.produit ion-icon{
+    cursor: pointer;
+
+}
+
+.produits img{
+    width: 100px;
+}
+
+.totalContenuPanier{
+    width : 100% ;
+    display : flex;
+    justify-content: flex-end ;
+    padding: 10px 0;
+   
+}
+
+.panierTotalTitre{
+    width: 30%;
+
+}
+.panierTotal{
+    width: 10%;
+}
+
