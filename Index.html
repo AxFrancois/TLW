@@ -2,6 +2,7 @@
 <html lang="fr"> <!--Page d'accueil-->
 <head>
 <link rel="stylesheet" type="text/css" href="web.css ">
+<link rel="stylesheet" href ="test-css-panier.css">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 <title>Agence Risque-Tout</title>
 </head>
@@ -11,9 +12,9 @@
         <h1>Agence Risque-tout</h1>
         <nav>
             <ul>
-                <li class="Home"><a href="Index.html">Page d'accueil <i class="fa fa-home" aria-hidden="true"></i></a></li>
-                <li class="Client"><a href="">Espace Client <i class="fa fa-user-circle" aria-hidden="true"></i></a></li>
-                <li class="Panier"><a href="">Panier <i class="fa fa-shopping-basket" aria-hidden="true"></i></a></li>
+                <li class="Home"><a href="Index.html">Page d'accueil <i class="fa fa-home" aria-hidden="true"></i><span>0</span></a></li>
+                <li class="Client"><a href="identification.html">Espace Client <i class="fa fa-user-circle" aria-hidden="true"></i></a></li>
+                <li class="Panier"><a href="panier.html">Panier <i class="fa fa-shopping-basket" aria-hidden="true"></i></a></li>
                 <li class="Contact"><a href="Contact.html">À Propos & Contact <i class="fa fa-at" aria-hidden="true"></i></a></li>
             </ul>
         </nav>
@@ -38,6 +39,7 @@
                     <div class="Overlay">
                       <div class="InfoDestination">Paris | [Heure] | <span id="zone_meteo1"></span></div>
                     </div>
+                    <a class="add-panier panier1" href="#">Ajouter au panier</a>
                 </div>
             </li>
             <li>
@@ -47,6 +49,7 @@
                     <div class="Overlay">
                       <div class="InfoDestination">Istanbul | [Heure] | <span id="zone_meteo2"></span></div>
                     </div>
+                    <a class="add-panier panier2" href="#">Ajouter au panier</a>
                 </div>
             </li>
             <li>
@@ -56,6 +59,7 @@
                     <div class="Overlay">
                       <div class="InfoDestination">Carcassonne | [Heure] |<span id="zone_meteo3"></span> </div>
                     </div>
+                    <a class="add-panier panier3" href="#">Ajouter au panier</a>
                 </div>
             </li>
         </ul>

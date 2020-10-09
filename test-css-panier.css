@@ -6,9 +6,7 @@
 }
 
 
-
-
-.container{
+.Destinations{
     display : flex;
     justify-content: center;
     flex-wrap: wrap;
@@ -16,7 +14,7 @@
     padding-bottom: 100px;
 }
 
-.image{
+.ImagesDestinations{
     margin-right: 20px;
     margin-left: 20px;
     position: relative;
@@ -26,33 +24,23 @@
 .add-panier{
     position: absolute;
     width: 100%;
-    background-color: darkgrey;
+    background-color: rgb(255, 253, 253);
     transition: all 0.3s ease-in-out;
     opacity: 0;
-    color: brown;
+    color: rgb(19, 59, 236);
     cursor: pointer;
     text-align: center;
 }
 
-.image:hover .panier1,
-.image:hover .panier2,
-.image:hover .panier3{
-    bottom : 48px;
-    opacity: 1;
+.ImagesDestinations:hover .panier1,
+.ImagesDestinations:hover .panier2,
+.ImagesDestinations:hover .panier3{
+    bottom : 185px;
+    opacity: 0.8;
     padding : 10px;
     text-decoration : none;
 }
 
-
-#zone_meteo1, 
-#zone_meteo2, 
-#zone_meteo3{
-    position: absolute;
-    width: 100%;
-    text-align: left;
-    margin-top: 5px;
-    margin-left: 5px;
-}
 
 
 /*------------------PAGE PANIER --------------------------------*/
