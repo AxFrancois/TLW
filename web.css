@@ -42,16 +42,9 @@ nav a{
     text-decoration: none;
 }
 
-nav li:hover .submenu{
-    display : inline-block ;
-    position : absolute ;
-    top : 100% ;
-    left : 0px ;
-    padding : 0px ;
-    z-index : 1000 ;
-}
 
-.submenu li a{
+
+li a{
     border-bottom: 1px solid gray;
     font-size: 15px;
     color : #222538 ;
@@ -63,36 +56,23 @@ nav li:hover .submenu{
     display: none;
 }
 
-.menu-contact:hover{
+.Contact:hover{
     border-top : 5px solid #e44d26 ;
     background-color : rgba(228,77,38,0,15) ;
 
 }
 
-.menu-panier:hover{
+.Panier:hover{
     border-top: 5px solid #0070bb;
     background-color: rgba(000,112,192,0.15);
 
 }
-.menu-id:hover{
+.Client:hover{
     border-top: 5px solid #f1dc4f;
     background-color: rgba(241,211,79,0.15);
 }
 
-.menu-contact .submenu{
-    background-color : rgb(230,100,40);
-}
-.submenu li:hover a{
-    color : #eee ;
-    font-weight: bold;
-
-}
-
-.menu-contact .submenu li:hover{
-    background-color : rgb(210 , 77,60);
-
-}
-
+/*-----------------------------ESPACE CLIENT -------------------------------------------------------*/
 .id{
     position: relative;
     }
@@ -168,4 +148,14 @@ div a{
 
 .coeur{
     margin : auto ;
+}
+
+#zone_meteo1, 
+#zone_meteo2, 
+#zone_meteo3{
+    position: absolute;
+    width: 100%;
+    text-align: left;
+    margin-top: 5px;
+    margin-left: 5px;
 }
