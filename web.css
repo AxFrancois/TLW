@@ -52,15 +52,19 @@ li a{
     font-family : "Calibri"
 }
 
-.submenu{
-    display: none;
-}
+
 
 .Contact:hover{
     border-top : 5px solid #e44d26 ;
     background-color : rgba(228,77,38,0,15) ;
 
 }
+.Home:hover{
+    border-top : 5px solid #496e1e ;
+    background-color : rgba(228,77,38,0,15) ;
+
+}
+
 
 .Panier:hover{
     border-top: 5px solid #0070bb;
