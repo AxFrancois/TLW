@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" >
+        <link href="web.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+      </head>
+
+<body>
+  <nav>
+    <ul>
+      <li class = "home"><a target="_blank" href = "PageWeb.html"><i class ="fa fa-home" aria-hidden="true"></i></a></li> 
+      <li class ="menu-contact"><a target="_blank" href = "contact.html">Contact</a>
+            <ul class = "submenu"> 
+                 <li><a target="_blank" href = "coordonne.html">Nous contacter</a></li>
+                 <li><a target="_blank" href = "a-propos.html">A propos</a> </li>
+            </ul> 
+        </li> 
+        <li class= "menu-panier"><a target="_blank" href = "panier.html">Panier</a></li> 
+        <li class= "menu-id"><a target="_blank" href = "identification.html">Espace Client</a></li> 
+    </ul>
+</nav>
+
+<form class = "client-space" method="POST" action="base-de-donnees.html" autocomplete="on">
+  <div class ="id">
+    <span class = "input_icon"><i class ="fa fa-user" aria-hidden="true"></i></span>
+    <label for = "identifiant">Nom d'utilisateur</label></br>
+    <input type="text" name = "identifiant" id = "identifiant" placeholder="Identifiant"/></br>
+  </div>
+  <br>
+    <div class ="id">
+    <span class = "input_icon"><i class ="fa fa-lock" aria-hidden="true"></i></span>
+    <label for = "pass">Mot de passe</label></br>
+    <input type="password" name = "pass" id = "pass" placeholder="Password"/></br>
+    </div>
+    <br>
+    <input type = "checkbox" name ="Rememeber" id ="Rememeber"/>
+    <label for = "Rememeber">Se souvenir de moi</label>
+    
+    <input type="submit" class = "send "value = "Envoyer"><br>
+
+    
+  </form>
+
+</body>
+</html>

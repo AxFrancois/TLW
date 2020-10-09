@@ -1,0 +1,171 @@
+body {
+    font-family: "serif";
+    margin : 0 px;
+    padding : 0 px ;
+}
+nav{
+    width: 100%;
+    background-color : #424558;
+}
+nav > ul {
+    margin : 0 px;
+    padding : 0 px ;
+}
+nav > ul::after{
+    content : "" ;
+    display : block;
+    clear : both;
+
+}
+
+nav > ul >li {
+    float : left ;
+    position : relative ;
+}
+
+nav > ul >li >a{
+    font-size: 20px;
+    padding : 20px 30px;
+    color : #FFF ; 
+}
+nav > ul >li:hover a{
+    padding: 15px 30px 20px 30px;
+}
+nav li {
+    list-style-type: none ;  
+}
+
+
+
+nav a{
+    display : inline-block;
+    text-decoration: none;
+}
+
+nav li:hover .submenu{
+    display : inline-block ;
+    position : absolute ;
+    top : 100% ;
+    left : 0px ;
+    padding : 0px ;
+    z-index : 1000 ;
+}
+
+.submenu li a{
+    border-bottom: 1px solid gray;
+    font-size: 15px;
+    color : #222538 ;
+    width : 100px ;
+    font-family : "Calibri"
+}
+
+.submenu{
+    display: none;
+}
+
+.menu-contact:hover{
+    border-top : 5px solid #e44d26 ;
+    background-color : rgba(228,77,38,0,15) ;
+
+}
+
+.menu-panier:hover{
+    border-top: 5px solid #0070bb;
+    background-color: rgba(000,112,192,0.15);
+
+}
+.menu-id:hover{
+    border-top: 5px solid #f1dc4f;
+    background-color: rgba(241,211,79,0.15);
+}
+
+.menu-contact .submenu{
+    background-color : rgb(230,100,40);
+}
+.submenu li:hover a{
+    color : #eee ;
+    font-weight: bold;
+
+}
+
+.menu-contact .submenu li:hover{
+    background-color : rgb(210 , 77,60);
+
+}
+
+.id{
+    position: relative;
+    }
+    
+.input_icon{
+        position: inherit; 
+        top: 2px;
+        color: #424558; 
+        left: 2px;
+        font-size: 21px; 
+        width: 50px;
+}
+        
+        
+
+.client-space {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 100px;
+    width:200px; 
+}
+.send {
+    background-color: #e96e50;
+    border:#c1593f;
+    margin-top: 10px;
+    padding : 6px 12px;
+    border-radius: 5px;
+    font : 15px "Calibri" , "Sans serif"
+}
+
+
+.opacite img {
+    filter: opacity(55%);
+    -webkit-filter: opacity(55%);
+    }
+.opacite img:hover {
+    filter: opacity(100%);
+    -webkit-filter: opacity(100%);
+}
+
+
+ ul >li {
+    float : left ;
+    position : relative ;
+    list-style-type: none;
+}
+div a{
+    padding : 5px 10px;
+    
+}
+.renseignement{
+    height: 50px;
+    width: 200px;
+}
+
+.marge {
+    margin-bottom:15px;
+ }
+
+.reservation {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 100px;
+    width:600px; 
+    border : 3px solid burlywood ;
+    border-radius: 5px;
+}
+
+.colonne {
+    float: left;
+    width: 45%;
+}
+
+.coeur{
+    margin : auto ;
+}
