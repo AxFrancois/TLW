@@ -154,7 +154,6 @@ div a{
     margin : auto ;
 }
 
-<<<<<<< HEAD
 .ImagesDestinations{
     width: 300px;
     border: dashed blue 1px;
@@ -169,7 +168,6 @@ div a{
     padding: 30x;
     margin: auto;
     text-align: center;
-=======
 #zone_meteo1, 
 #zone_meteo2, 
 #zone_meteo3{
@@ -178,5 +176,4 @@ div a{
     text-align: left;
     margin-top: 5px;
     margin-left: 5px;
->>>>>>> b8fc124f315392f419545994c541930f016e99ae
 }
