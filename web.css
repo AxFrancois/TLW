@@ -183,9 +183,7 @@ div a{
 #zone_meteo1, 
 #zone_meteo2, 
 #zone_meteo3{
-    position: absolute;
-    width: 100%;
-    text-align: left;
-    margin-top: 5px;
-    margin-left: 5px;
+    width: fit-content;
+    height: fit-content;
+    
 }
