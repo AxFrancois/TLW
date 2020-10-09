@@ -24,7 +24,7 @@
 }
 
 .add-panier{
-    display: inline-block;
+    
     position: absolute;
     width: 50%;
     background-color: rgb(255, 253, 253);
@@ -33,7 +33,7 @@
     color: rgb(19, 59, 236);
     cursor: pointer;
     text-align: center;
-    float : left;
+   
 }
 
 .ImagesDestinations:hover .panier1,
@@ -54,7 +54,7 @@
     color: rgb(19, 59, 236);
     cursor: pointer;
     text-align: center;
-    float : right;
+    float: right;
 }
 .ImagesDestinations:hover .reserver{
     bottom : 185px;
