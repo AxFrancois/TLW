@@ -217,3 +217,8 @@ div a{
     background-color: gray;
   }
 
+.Intro{
+    background-image: url(Photos/corse.jpeg) ;
+    padding : 30px;
+    text-align: center;
+}
