@@ -1,22 +1,22 @@
 let paniers = document.querySelectorAll('.add-panier');
 let produits = [
     {
-        name: 'Voyage en Corse',
-        tag: 'corse' ,
+        name: 'Voyage à Paris',
+        tag: 'Paris' ,
         prix: 600,
         inPanier:0
     },
 
     {
-        name: 'Voyage en Allemagne',
-        tag: 'allemagne' ,
+        name: 'Voyage à Istanbul',
+        tag: 'Istanbul' ,
         prix: 400,
         inPanier:0
     },
 
     {
-        name: 'Voyage en Australie',
-        tag: 'australie' ,
+        name: 'Voyage à Carcassonne',
+        tag: 'Carcassonne' ,
         prix: 1400,
         inPanier: 0
     }
@@ -33,7 +33,7 @@ function rechargementArticleNumbers() {
     let nombreProduits = localStorage.getItem('panierNumbers');
 
     if(nombreProduits) {
-        document.querySelector('.panier span').textContent = nombreProduits;
+        document.querySelector('.Panier span').textContent = nombreProduits;
     }
 }
 
@@ -43,10 +43,10 @@ function panierNumbers(produits) {
     
     if(nombreProduits) {
         localStorage.setItem('panierNumbers' , nombreProduits + 1);
-        document.querySelector(' .panier span').textContent = nombreProduits + 1;
+        document.querySelector(' .Panier span').textContent = nombreProduits + 1;
     } else {
         localStorage.setItem('panierNumbers' , 1);
-        document.querySelector(' .panier span').textContent =1;
+        document.querySelector(' .Panier span').textContent =1;
     }
     
     setItems(produits);
@@ -99,7 +99,7 @@ function displayCart() {
            productContainer.innerHTML += `
            <div class ="produit">
              <ion-icon name="close-circle-outline"></ion-icon>
-             <img src ="./image/${item.tag}.jpg"
+             <img src ="./Photos/${item.tag}.jpg"
              <span>${item.name}</span>
              </div>
              <div class ="prix">$${item.prix},00</div>

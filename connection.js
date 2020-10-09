@@ -1,6 +1,7 @@
 
-let bdd = {user1 : {userName :"paul69" ,motDePasse : 123},user2:{userName :"leo69" ,motDePasse :"678"}};
-console.log(bdd.user1.userName);
+let bdd = {user1 : {userName :"Paul" ,motDePasse : "123"},user2:{userName :"Leo" ,motDePasse :"456"},user4:{userName :"Arthur" ,motDePasse :"789"},user4:{userName :"Alexandre" ,motDePasse :"101112"}};
+
+
 document.getElementById("client-space").addEventListener("submit" , function(e){
     
     var pseudo = document.getElementById("identifiant");
@@ -10,9 +11,7 @@ document.getElementById("client-space").addEventListener("submit" , function(e){
        if (!inputs[i].value);
   
    
-    
-    
-    
+
     
    } 
 })

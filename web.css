@@ -52,15 +52,14 @@ li a{
 
 .Contact:hover{
     border-top : 5px solid #e44d26 ;
-    background-color : rgba(228,77,38,0,15) ;
+    background-color : rgba(228,77,38,0.15) ;
 
 }
 .Home:hover{
     border-top : 5px solid #496e1e ;
-    background-color : rgba(228,77,38,0,15) ;
+    background-color : rgba(156, 149, 40, 0.15) ;
 
 }
-
 
 .Panier:hover{
     border-top: 5px solid #0070bb;
@@ -85,8 +84,7 @@ li a{
         font-size: 21px; 
         width: 50px;
 }
-        
-        
+      
 
 .client-space {
     margin-left: auto;
