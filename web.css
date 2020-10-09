@@ -151,18 +151,33 @@ div a{
 
 .ImagesDestinations{
     width: 300px;
-    border: dashed blue 1px;
+    border:solid black 2px;
+    border-radius: 2px;
+    margin: 30px;
+
 }
 
 .image{
-    max-height: 300px;
-    max-width: 300px;
+    height: 200px;
+    width: 300px;
+}
+
+.Header{
+    padding: 30x;
+    margin: auto;
+    text-align: center;
+    position: static;
+    top: 0px;
+    width: 100%
 }
 
 .PiedPage{
     padding: 30x;
     margin: auto;
     text-align: center;
+    position: absolute;
+    bottom: 0px;
+    width: 100%
 }
 
 #zone_meteo1, 
