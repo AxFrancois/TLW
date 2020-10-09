@@ -9,10 +9,12 @@ body {
 nav{
     width: 100%;
     background-color : #424558;
+    display: inline-block;
+    
 }
 nav > ul {
-    margin : 0 px;
-    padding : 0 px ;
+    justify-content: center;
+    display: flex;
 }
 nav > ul::after{
     content : "" ;
@@ -43,10 +45,10 @@ nav a{
 
 
 li a{
-    border-bottom: 1px solid gray;
+    border-bottom: 2px solid gray;
     font-size: 15px;
     color : #222538 ;
-    font-family : "Calibri"
+    font-family : "HyperFont"
 }
 
 
@@ -155,12 +157,15 @@ div a{
     border:solid black 2px;
     border-radius: 2px;
     margin: 30px;
+    position: relative;
+
 
 }
 
 .image{
     height: 200px;
     width: 300px;
+    display: block;
 }
 
 .Header{
@@ -200,3 +205,17 @@ div a{
 .clear{
     clear: both;
 }
+
+.Overlay {
+    position: absolute;
+    bottom: 5px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    display: table;
+    margin: 0 auto;
+    border: 1px solid black;
+    width: 95%;
+    background-color: gray;
+  }
+
