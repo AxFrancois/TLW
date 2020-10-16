@@ -229,13 +229,18 @@ div a{
 h2{
     text-align: center;
 }
-
 .nous_contacter{
+    margin-top: 40px;
+    margin-bottom: 40px;
+
+}
+
+.nous_contacter_formulaire{
   
-    width:10%; 
+    width:50%; 
     margin-left: auto;
     margin-right: auto;
-    margin-top: 100px;
+    margin-top: 10px;
     border : 3px solid burlywood ;
     border-radius: 5px;
 }
@@ -255,3 +260,19 @@ h2{
 	opacity	:0.9;
 	z-index		:	2000;
 }
+
+.Coeur{
+    text-align: center;
+}
+
+.contactinfos{
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10px;
+    border:solid black 2px;
+    border-radius: 10px;
+    padding: 10px;
+    text-align: center;
+}
+
