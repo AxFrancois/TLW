@@ -254,7 +254,6 @@ h2{
 
 
 /*----------------------------------------------BOUTON RETOUR ---------------------------------------------------------------------*/
-<<<<<<< HEAD
 .top_link{
 	position:fixed;
 	right:20px;
@@ -268,8 +267,6 @@ h2{
 	opacity	:0.9;
 	z-index		:	2000;
 }
-=======
->>>>>>> ce871c34ec77d4ead9d1b1904351bca237234e6f
 
 .Coeur{
     text-align: center;
@@ -291,14 +288,9 @@ nav.nav2{
     background-color : #424558;
     display: inline-block;
 }
-<<<<<<< HEAD
 
 
 #button {
-=======
-  
-  #button {
->>>>>>> ce871c34ec77d4ead9d1b1904351bca237234e6f
     display: inline-block;
     background-color: #FF9800;
     width: 50px;
@@ -335,7 +327,6 @@ nav.nav2{
     opacity: 1;
     visibility: visible;
   }
-<<<<<<< HEAD
   
 h1{
     margin-top: 5px;
@@ -343,10 +334,14 @@ h1{
     font-size: 50px;
     font-family: sans-serif;
 }
-=======
 
   #button {
     margin: 30px;
   }
 
->>>>>>> ce871c34ec77d4ead9d1b1904351bca237234e6f
+#DestinationList {
+    padding-inline-start: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    grid-gap: 20px;
+}
