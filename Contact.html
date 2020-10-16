@@ -1,12 +1,16 @@
 <!DOCTYPE html>
 <html lang="fr"> <!--Page d'accueil-->
 <head>
-<link rel="stylesheet" type="text/css" href="style.css">
-<link rel="stylesheet" type="text/css" href="web.css ">
-<link rel="stylesheet" href ="test-css-panier.css">
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-<title>Agence Risque-Tout</title>
+    <style>
+        body {
+           background-image: url("Photos/background.jpg");
+        }
+     </style>
+    <link rel="stylesheet" type="text/css" href="web.css ">
+    <link rel="stylesheet" href ="test-css-panier.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Agence Risque-Tout</title>
 </head>
 
 <body>
@@ -15,15 +19,15 @@
         <nav>
             <ul>
                 <li class="Home"><a href="Index.html">Page d'accueil <i class="fa fa-home" aria-hidden="true"></i></a></li>
-                <li class="Client"><a href="">Espace Client <i class="fa fa-user-circle" aria-hidden="true"></i></a></li>
-                <li class="Panier"><a href="">Panier <i class="fa fa-shopping-basket" aria-hidden="true"></i></a></li>
+                <li class="Client"><a href="identification.html">Espace Client <i class="fa fa-user-circle" aria-hidden="true"></i></a></li>
+                <li class="Panier"><a href="panier.html">Panier <i class="fa fa-shopping-basket" aria-hidden="true"></i><span>(0)</span></a></li>
                 <li class="Contact"><a href="Contact.html">À Propos & Contact <i class="fa fa-at" aria-hidden="true"></i></a></li>
             </ul>
         </nav>
     </div>
 
     <div class="Coeur">
-        <div class="contact infos">
+        <div class="contactinfos">
         <h2>
             À Propos
         </h2>
@@ -32,13 +36,15 @@
             Fonder une agence de voyage en pleine crise sanitaire mondiale était un pari osé, mais qui s'est avéré payant grâce à la diminution de fréquentation des sites concurents.
             Très concretement, personne ne va jamais lire ça anyway.
         </p>
+        <br>
+        <div class="nous_contacter">
         <h2>
             Nous Contacter
         </h2>
         <h3>
             Une question ? Un problème ? Vous pouvez nous demander des informations via ce formulaire de contact :
         </h3>
-        <fieldset class="nous_contacter"><legend>Vos information</legend>
+        <fieldset class="nous_contacter_formulaire"><legend>Vos information</legend>
         <form  action="FormulaireContact" method="post">
             <div>
                 <label for="Nom">Nom :</label>
@@ -57,6 +63,8 @@
             </div>
         </form>
     </fieldset>
+    </div>
+    <br>
         <h3>
             Vous pouvez également nous contacter via les moyens suivants : 
         </h3>

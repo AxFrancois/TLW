@@ -147,8 +147,9 @@ div a{
     width: 45%;
 }
 
-.coeur{
+.Coeur{
     margin : auto ;
+    background-color: white;
 }
 
 .ImagesDestinations{
@@ -229,13 +230,18 @@ div a{
 h2{
     text-align: center;
 }
-
 .nous_contacter{
+    margin-top: 40px;
+    margin-bottom: 40px;
+
+}
+
+.nous_contacter_formulaire{
   
-    width:10%; 
+    width:50%; 
     margin-left: auto;
     margin-right: auto;
-    margin-top: 100px;
+    margin-top: 10px;
     border : 3px solid burlywood ;
     border-radius: 5px;
 }
@@ -243,6 +249,26 @@ h2{
 
 /*----------------------------------------------BOUTON RETOUR ---------------------------------------------------------------------*/
 
+.Coeur{
+    text-align: center;
+}
+
+.contactinfos{
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10px;
+    border:solid black 2px;
+    border-radius: 10px;
+    padding: 10px;
+    text-align: center;
+}
+
+nav.nav2{
+    width: 100%;
+    background-color : #424558;
+    display: inline-block;
+}
   
   #button {
     display: inline-block;
@@ -276,6 +302,7 @@ h2{
   #button:active {
     background-color: #555;
   }
+
   #button.show {
     opacity: 1;
     visibility: visible;
@@ -284,3 +311,4 @@ h2{
   #button {
     margin: 30px;
   }
+
