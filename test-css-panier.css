@@ -24,24 +24,22 @@
 }
 
 .add-panier{
-    
+    right: 50%;
     position: absolute;
-    right: 0px;
+    width: 50%;
     background-color: rgb(255, 253, 253);
     transition: all 0.3s ease-in-out;
     opacity: 0;
     color: rgb(19, 59, 236);
     cursor: pointer;
     text-align: center;
-   
+    
 }
 
 .ImagesDestinations:hover .panier1,
 .ImagesDestinations:hover .panier2,
 .ImagesDestinations:hover .panier3{
     bottom : 160px;
-    right: 0px;
-    width: 70%;
     opacity: 0.8;
     padding : 10px;
     text-decoration : none;
@@ -49,16 +47,16 @@
 .reserver{
     
     position: absolute;
+    width: 50%;
     background-color: rgb(255, 253, 253);
     transition: all 0.3s ease-in-out;
     opacity: 0;
     color: rgb(19, 59, 236);
     cursor: pointer;
     text-align: center;
-    float: right;
+    
 }
 .ImagesDestinations:hover .reserver{
-    width: 30%;
     bottom : 160px;
     opacity: 0.8;
     padding: 10px;
