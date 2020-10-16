@@ -174,7 +174,9 @@ div a{
     text-align: center;
     position: static;
     top: 0px;
-    width: 100%
+    width: 90%;
+    border:solid black 2px;
+    border-radius: 10px;
 }
 
 .Contenu{
@@ -186,10 +188,14 @@ div a{
 .PiedPage{
     padding: 30x;
     text-align: center;
-    position: fixed;
+    left: 5%;
+    position: absolute;
     bottom: 0px;
-    width: 100%;
+    width: 90%;
     border-top: 1px solid black;
+    border-left: 1px solid black;
+    border-right: 1px solid black;
+    border-radius: 10px     10px      0           0;   
     background-color: white;
 
 }
@@ -248,7 +254,6 @@ h2{
 
 
 /*----------------------------------------------BOUTON RETOUR ---------------------------------------------------------------------*/
-<<<<<<< HEAD
 .top_link{
 	position:fixed;
 	right:20px;
@@ -283,7 +288,6 @@ nav.nav2{
     background-color : #424558;
     display: inline-block;
 }
-=======
 
 
 #button {
@@ -325,4 +329,9 @@ nav.nav2{
     visibility: hidden;
   }
   
->>>>>>> 5b2bcfba5838f47228e34a4697a0901857198b1f
+h1{
+    margin-top: 5px;
+    margin-bottom: 5px;
+    font-size: 50px;
+    font-family: sans-serif;
+}
