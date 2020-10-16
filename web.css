@@ -248,6 +248,7 @@ h2{
 
 
 /*----------------------------------------------BOUTON RETOUR ---------------------------------------------------------------------*/
+<<<<<<< HEAD
 .top_link{
 	position:fixed;
 	right:20px;
@@ -282,3 +283,46 @@ nav.nav2{
     background-color : #424558;
     display: inline-block;
 }
+=======
+
+
+#button {
+    display: inline-block;
+    background-color: #FF9800;
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    border-radius: 4px;
+    margin: 30px;
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    transition: background-color .3s;
+    z-index: 1000;
+  }
+  #button:hover {
+    cursor: pointer;
+    background-color: #333;
+  }
+  #button:active {
+    background-color: #555;
+  }
+
+  #button::after {
+    content: "\f077";
+    font-family: FontAwesome;
+    font-weight: normal;
+    font-style: normal;
+    font-size: 2em;
+    line-height: 50px;
+    color: #fff;
+  }
+
+#button {
+    transition: background-color .3s, 
+      opacity .5s, visibility .5s;
+    opacity: 0;
+    visibility: hidden;
+  }
+  
+>>>>>>> 5b2bcfba5838f47228e34a4697a0901857198b1f
