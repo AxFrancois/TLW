@@ -48,7 +48,6 @@ li a{
     border-bottom: 2px solid gray;
     font-size: 15px;
     color : #222538 ;
-    font-family : "HyperFont"
 }
 
 
@@ -218,7 +217,7 @@ div a{
   }
 
 .Intro{
-    background-image: url(Photos/corse.jpeg) ;
+    background-color : aliceblue;
     padding : 30px;
     text-align: center;
 }
