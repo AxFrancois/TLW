@@ -38,7 +38,8 @@
         <h3>
             Une question ? Un problème ? Vous pouvez nous demander des informations via ce formulaire de contact :
         </h3>
-        <form action="FormulaireContact" method="post">
+        <fieldset class="nous_contacter"><legend>Vos information</legend>
+        <form  action="FormulaireContact" method="post">
             <div>
                 <label for="Nom">Nom :</label>
                 <input type="text" id="Nom" name="ContactName">
@@ -52,9 +53,10 @@
                 <textarea id="texte" name="ContactMessage"></textarea>
             </div>
             <div class="Boutton">
-                <button type="submit">Envoyer le message</button>
+                <button class = "send" type="submit">Envoyer le message</button>
             </div>
         </form>
+    </fieldset>
         <h3>
             Vous pouvez également nous contacter via les moyens suivants : 
         </h3>
