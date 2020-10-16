@@ -124,7 +124,7 @@ div a{
 }
 .renseignement{
     height: 50px;
-    width: 200px;
+    width: 100%;
 }
 
 .marge {
@@ -135,17 +135,39 @@ div a{
     
     float: right;
     margin-left: auto;
-    margin-right: 10%;
-    margin-top: 100px;
-    width:600px; 
+    margin-right: 5%;
+    margin-top: 1%;
+    width:50%; 
     border : 3px solid burlywood ;
     border-radius: 5px;
 }
 
 .colonne {
     float: left;
-    width: 45%;
+    width: 50%;
 }
+.remiseAZero{
+    float: right;
+    background-color: #0f0d70;
+    font : red ;
+    font-weight: bold;
+}
+
+#reservationRedirect{
+    padding: 40px;
+    margin-left: 75%;
+
+}
+
+.reserved{
+    background-color: #e96e50;
+    border:#c1593f;
+    margin-top: 10px;
+    padding : 6px 12px;
+    border-radius: 5px;
+    font : 20px  "Sans serif"
+}
+
 
 .Coeur{
     margin : auto ;
@@ -254,22 +276,6 @@ h2{
 
 
 /*----------------------------------------------BOUTON RETOUR ---------------------------------------------------------------------*/
-<<<<<<< HEAD
-.top_link{
-	position:fixed;
-	right:20px;
-	bottom	:50px;
-	display	:	none;
-	padding	:	20px;
-	background:	#fff;
-	-moz-border-radius:	40px;
-	-webkit-border-radius:40px;
-	border-radius:	40px;
-	opacity	:0.9;
-	z-index		:	2000;
-}
-=======
->>>>>>> ce871c34ec77d4ead9d1b1904351bca237234e6f
 
 .Coeur{
     text-align: center;
@@ -291,14 +297,8 @@ nav.nav2{
     background-color : #424558;
     display: inline-block;
 }
-<<<<<<< HEAD
-
-
-#button {
-=======
   
   #button {
->>>>>>> ce871c34ec77d4ead9d1b1904351bca237234e6f
     display: inline-block;
     background-color: #FF9800;
     width: 50px;
@@ -335,18 +335,8 @@ nav.nav2{
     opacity: 1;
     visibility: visible;
   }
-<<<<<<< HEAD
-  
-h1{
-    margin-top: 5px;
-    margin-bottom: 5px;
-    font-size: 50px;
-    font-family: sans-serif;
-}
-=======
 
   #button {
     margin: 30px;
   }
 
->>>>>>> ce871c34ec77d4ead9d1b1904351bca237234e6f
