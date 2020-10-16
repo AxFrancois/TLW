@@ -147,8 +147,9 @@ div a{
     width: 45%;
 }
 
-.coeur{
+.Coeur{
     margin : auto ;
+    background-color: white;
 }
 
 .ImagesDestinations{
@@ -276,3 +277,8 @@ h2{
     text-align: center;
 }
 
+nav.nav2{
+    width: 100%;
+    background-color : #424558;
+    display: inline-block;
+}
