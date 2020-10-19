@@ -1,26 +1,4 @@
 let paniers = document.querySelectorAll('.add-panier');
-let produits = [
-    {
-        name: 'Voyage à Paris',
-        tag: 'Paris' ,
-        prix: 600,
-        inPanier:0
-    },
-
-    {
-        name: 'Voyage à Istanbul',
-        tag: 'Istanbul' ,
-        prix: 400,
-        inPanier:0
-    },
-
-    {
-        name: 'Voyage à Carcassonne',
-        tag: 'Carcassonne' ,
-        prix: 1400,
-        inPanier: 0
-    }
-];
 
 for (let i=0; i < paniers.length; i++) {
     paniers[i].addEventListener('click', () => {
