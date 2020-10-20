@@ -49,6 +49,7 @@ function setItems(produits) {
             [produits.tag] : produits
        }
     }
+    
     localStorage.setItem("produitsInPanier", JSON.stringify(cartItems));
 }
 function coutTotal(produits) {
@@ -76,11 +77,11 @@ function displayCart() {
         Object.values(cartItems).map(item => {
            productContainer.innerHTML += `
            <div class ="produit">
-             <ion-icon name="close-circle-outline"></ion-icon>
+             <ion-icon class="deleteItem" name="close-circle-outline"></ion-icon>
              <img src ="./Photos/${item.tag}.jpg"
              <span>${item.name}</span>
              </div>
-             <div class ="prix">$${item.prix},00</div>
+             <div class ="prix">${item.prix}€,00</div>
             <div class ="quantite">
             <ion-icon class = "diminuer" 
             name="chevron-back-circle-outline"></ion-icon>
@@ -89,7 +90,7 @@ function displayCart() {
             name="chevron-forward-circle-outline"></ion-icon>
             </div>
             <div class ="total">
-               $${item.inPanier*item.prix},00
+               ${item.inPanier*item.prix},00€
             </div>
             `
         });
@@ -97,7 +98,7 @@ function displayCart() {
         productContainer.innerHTML += `
         <div class="totalContenuPanier">
          <h4 class="panierTotalTitre">Total Panier</h4>
-         <h4 class="panierTotal">$${cartCost},00</h4>
+         <h4 class="panierTotal">${cartCost},00€</h4>
          </div>
         `;
     }
@@ -106,6 +107,26 @@ function displayCart() {
 }
 rechargementArticleNumbers();
 displayCart();
+
+
+
+function setDeleteButtons(){ 
+    removeButtons = document.querySelectorAll(".deleteItem"); 
+    var cartItems = localStorage.getItem("produitsInPanier"); 
+    cartItems = JSON.parse(cartItems); 
+    
+    for(i=0; i < removeButtons.length; i++){ 
+        
+        removeButtons[i].addEventListener("click", function (e) {
+        
+        delete cartItems[e.currentTarget.dataset.tag];
+        localStorage.setItem("produitsInPanier", JSON.stringify(cartItems));
+     });
+    }
+}
+
+setDeleteButtons();
+
 
 //------------------------------------BOUTON RETOUR-------------------------------------------------------------------//
 jQuery(document).ready(function() {

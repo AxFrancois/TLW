@@ -276,19 +276,6 @@ h2{
 
 
 /*----------------------------------------------BOUTON RETOUR ---------------------------------------------------------------------*/
-.top_link{
-	position:fixed;
-	right:20px;
-	bottom	:50px;
-	display	:	none;
-	padding	:	20px;
-	background:	#fff;
-	-moz-border-radius:	40px;
-	-webkit-border-radius:40px;
-	border-radius:	40px;
-	opacity	:0.9;
-	z-index		:	2000;
-}
 
 .Coeur{
     text-align: center;
@@ -314,7 +301,7 @@ nav.nav2{
 
 #button {
     display: inline-block;
-    background-color: #FF9800;
+    background-color: #146ff7;
     width: 50px;
     height: 50px;
     text-align: center;
@@ -322,7 +309,7 @@ nav.nav2{
     position: fixed;
     bottom: 30px;
     right: 30px;
-    transition: background-color .3s, 
+    transition: background-color .3s,
       opacity .5s, visibility .5s;
     opacity: 0;
     visibility: hidden;
@@ -336,7 +323,8 @@ nav.nav2{
     font-size: 2em;
     line-height: 50px;
     color: #fff;
-  }
+    
+}
   #button:hover {
     cursor: pointer;
     background-color: #333;
@@ -357,8 +345,8 @@ h1{
     font-family: sans-serif;
 }
 
-  #button {
-    margin: 30px;
+#button {
+    margin: 10px;
   }
 
 #DestinationList {

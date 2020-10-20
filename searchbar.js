@@ -4,7 +4,7 @@ let produits = [
         index :1,
         name: 'Voyage à Paris',
         tag: 'Paris' ,
-        prix: 600,
+        prix: 150,
         inPanier:0
     },
 
@@ -12,7 +12,7 @@ let produits = [
         index :2,
         name: 'Voyage à Istanbul',
         tag: 'Istanbul' ,
-        prix: 400,
+        prix: 600,
         inPanier:0
     },
 
@@ -20,7 +20,54 @@ let produits = [
         index :3,
         name: 'Voyage à Carcassonne',
         tag: 'Carcassonne' ,
-        prix: 1400,
+        prix: 350,
+        inPanier: 0
+    },
+    {
+        index :4,
+        name: 'Voyage en Allemagne',
+        tag: 'Allemagne' ,
+        prix: 400,
+        inPanier:0
+    },
+
+    {
+        index :5,
+        name: 'Voyage en Australie',
+        tag: 'Australie' ,
+        prix: 1300,
+        inPanier:0
+    },
+
+    {
+        index :6,
+        name: 'Voyage à Barcelone',
+        tag: 'Barcelone' ,
+        prix: 500,
+        inPanier: 0
+    },
+
+    {
+        index :7,
+        name: 'Voyage en Crète',
+        tag: 'Crète' ,
+        prix: 800,
+        inPanier:0
+    },
+
+    {
+        index :8,
+        name: 'Voyage au Japon',
+        tag: 'Japon' ,
+        prix: 200,
+        inPanier:0
+    },
+
+    {
+        index :9,
+        name: 'Voyage à Rome',
+        tag: 'Rome' ,
+        prix: 420,
         inPanier: 0
     }
 ];
