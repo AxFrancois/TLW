@@ -4,7 +4,8 @@ body {
     font-family: "serif";
     margin : 0 px;
     padding : 0 px ;
-    
+     background-image: url("Photos/background.jpg");
+     
 }
 nav{
     width: 100%;
@@ -102,22 +103,12 @@ li a{
     font : 15px "Calibri" , "Sans serif"
 }
 
-
-.opacite img {
-    filter: opacity(55%);
-    -webkit-filter: opacity(55%);
-    }
-.opacite img:hover {
-    filter: opacity(100%);
-    -webkit-filter: opacity(100%);
-}
-
-
- ul >li {
+ #Destinations .Emplacement{
     float : left ;
     position : relative ;
     list-style-type: none;
 }
+
 div a{
     padding : 5px 10px;
     
@@ -178,9 +169,8 @@ div a{
     width: 300px;
     border:solid black 2px;
     border-radius: 2px;
-    margin: 30px;
+    margin: 20px;
     position: relative;
-
 
 }
 
@@ -202,13 +192,11 @@ div a{
 }
 
 .Contenu{
-
-    margin: auto;
-    
+    margin: auto;   
 }
 
 .PiedPage{
-    padding: 30x;
+    padding-top: 15px;
     text-align: center;
     left: 5%;
     position: absolute;
@@ -219,16 +207,9 @@ div a{
     border-right: 1px solid black;
     border-radius: 10px     10px      0           0;   
     background-color: white;
-
-}
-
-#zone_meteo1, 
-#zone_meteo2, 
-#zone_meteo3{
-    width: fit-content;
-    height: fit-content;
     
-}
+}  
+
 
 .clear{
     clear: both;
