@@ -37,7 +37,7 @@
 }
 
 .ImagesDestinations:hover .panier{
-    bottom : 160px;
+    bottom : 163px;
     opacity: 0.8;
     padding : 10px;
     text-decoration : none;
@@ -55,10 +55,11 @@
     
 }
 .ImagesDestinations:hover .reserver{
-    bottom : 160px;
+    bottom : 163px;
     opacity: 0.8;
     padding: 10px;
     text-decoration : none;
+    
 }
 
 /*------------------PAGE PANIER --------------------------------*/

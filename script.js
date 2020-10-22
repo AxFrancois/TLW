@@ -81,7 +81,7 @@ function displayCart() {
              <img src ="./Photos/${item.tag}.jpg"
              <span>${item.name}</span>
              </div>
-             <div class ="prix">${item.prix}€,00</div>
+             <div class ="prix">${item.prix},00€</div>
             <div class ="quantite">
             <ion-icon class = "diminuer" 
             name="chevron-back-circle-outline"></ion-icon>

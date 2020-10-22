@@ -81,6 +81,7 @@ li a{
     float : left ;
     position : relative ;
     list-style-type: none;
+    
 }
 
 div a{
@@ -422,3 +423,4 @@ h1{
     border-radius: 5px;
     font : 15px "Calibri" , "Sans serif"
 }
+

@@ -99,10 +99,11 @@ const displayDestinations = (produits) => {
                 <div class="ImagesDestinations">            
                 <img src="Photos/${Emplacement.tag}.jpg" alt="${Emplacement.tag}" class="image" style="width:100%">
                 <div class="Overlay">
-                <div class="InfoDestination">${Emplacement.tag} | [Heure] | <span id="zone_meteo${Emplacement.index}"></span> </div>
+                <div class="InfoDestination">${Emplacement.tag} | [Heure] |${Emplacement.prix}€ <span id="zone_meteo${Emplacement.index}"></span> </div>
                 </div>
                 <a class="add-panier panier" href="#">Ajouter au panier</a>
                 <a class ="reserver" href="reservation.html">Réserver</a>
+               
                 </div>
             </li>
             
