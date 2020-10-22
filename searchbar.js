@@ -101,7 +101,7 @@ const displayDestinations = (produits) => {
                 <div class="Overlay">
                 <div class="InfoDestination">${Emplacement.tag} | [Heure] | <span id="zone_meteo${Emplacement.index}"></span> </div>
                 </div>
-                <a class="add-panier panier${Emplacement.index}" href="#">Ajouter au panier</a>
+                <a class="add-panier panier" href="#">Ajouter au panier</a>
                 <a class ="reserver" href="reservation.html">Réserver</a>
                 </div>
             </li>

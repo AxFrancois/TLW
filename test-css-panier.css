@@ -36,15 +36,7 @@
     
 }
 
-.ImagesDestinations:hover .panier1,
-.ImagesDestinations:hover .panier2,
-.ImagesDestinations:hover .panier3,
-.ImagesDestinations:hover .panier4,
-.ImagesDestinations:hover .panier5,
-.ImagesDestinations:hover .panier6,
-.ImagesDestinations:hover .panier7,
-.ImagesDestinations:hover .panier8,
-.ImagesDestinations:hover .panier9{
+.ImagesDestinations:hover .panier{
     bottom : 160px;
     opacity: 0.8;
     padding : 10px;

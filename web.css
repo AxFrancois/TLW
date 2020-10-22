@@ -16,6 +16,7 @@ nav{
 nav > ul {
     justify-content: center;
     display: flex;
+    border-bottom: 2px solid gray;
 }
 nav > ul::after{
     content : "" ;
@@ -46,7 +47,7 @@ nav a{
 
 
 li a{
-    border-bottom: 2px solid gray;
+    
     font-size: 15px;
     color : #222538 ;
 }
@@ -57,6 +58,7 @@ li a{
     background-color : rgba(228,77,38,0.15) ;
 
 }
+
 .Home:hover{
     border-top : 5px solid #496e1e ;
     background-color : rgba(156, 149, 40, 0.15) ;
@@ -73,35 +75,7 @@ li a{
     background-color: rgba(241,211,79,0.15);
 }
 
-/*-----------------------------ESPACE CLIENT -------------------------------------------------------*/
-.id{
-    position: relative;
-    }
-    
-.input_icon{
-        position: inherit; 
-        top: 2px;
-        color: #424558; 
-        left: 2px;
-        font-size: 21px; 
-        width: 50px;
-}
-      
 
-.client-space {
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 100px;
-    width:200px; 
-}
-.send {
-    background-color: #e96e50;
-    border:#c1593f;
-    margin-top: 10px;
-    padding : 6px 12px;
-    border-radius: 5px;
-    font : 15px "Calibri" , "Sans serif"
-}
 
  #Destinations .Emplacement{
     float : left ;
@@ -199,7 +173,7 @@ div a{
     padding-top: 15px;
     text-align: center;
     left: 5%;
-    position: absolute;
+    position: sticky;
     bottom: 0px;
     width: 90%;
     border-top: 1px solid black;
@@ -207,7 +181,7 @@ div a{
     border-right: 1px solid black;
     border-radius: 10px     10px      0           0;   
     background-color: white;
-    
+    clear : both;
 }  
 
 
@@ -335,4 +309,116 @@ h1{
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
     grid-gap: 20px;
+}
+/*----------------------------------------------ESPACE CLIENT------------------------------------------------------------*/
+
+.c-dialog {
+    position: fixed;
+    z-index: 100;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    padding: 2.4rem;
+    -webkit-overflow-scrolling: touch;
+    background-color: rgba(black, .75);
+    transition: .2s;
+  }
+  
+  
+  .c-dialog__box {
+      background-color: #fff;
+      border-radius: .6rem;
+      border: 2px solid turquoise;
+      color: #25465f;
+      overflow: auto;
+      position: relative;
+      padding: 3rem;
+      margin: auto;
+      max-height: calc(100vh - 4rem);
+      text-align: center;
+      z-index: 1;
+      
+  }
+  
+  
+  .c-dialog[aria-hidden="true"] {
+    visibility: hidden;
+    opacity: 0;
+  }
+  
+  .close{
+      background: none;
+      position: absolute;
+      top: .6rem;
+      right: .6rem;
+      height: 1.5rem;
+      width: 1.5rem;
+      z-index: 1;
+  }
+  
+#inscriptiontitle{
+      font: 1.2rem italic;
+      text-decoration: underline;
+  
+  }
+  
+#connexiontitle{
+      font: 1.2rem italic;
+      text-decoration: underline;
+  
+  }
+  
+  
+#disconnectlink ion-icon{
+    font-size: 18px;
+    color:gray;
+    cursor: pointer;
+    bottom: 0px;
+    display: flex;
+    float: left;
+    margin-right: 2px;
+}  
+#disconnectlink{
+    font-style: oblique;
+    cursor: pointer; 
+}
+#messageConnexionOn{
+    
+    font-size: large;
+}
+
+#disconnectlink:hover{
+      text-decoration: underline;
+ 
+  }
+
+.id{
+    position: relative;
+    }
+    
+.input_icon{
+        position: inherit; 
+        top: 2px;
+        color: #424558; 
+        left: 2px;
+        font-size: 21px; 
+        width: 50px;
+}
+      
+
+.client-space {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 100px;
+    width:200px; 
+}
+.send {
+    background-color: #e96e50;
+    border:#c1593f;
+    margin-top: 10px;
+    padding : 6px 12px;
+    border-radius: 5px;
+    font : 15px "Calibri" , "Sans serif"
 }
