@@ -25,7 +25,7 @@ const open = function (dialog) {
   dialog.setAttribute('aria-hidden', false);
   doc.setAttribute('aria-hidden', true);
 
-  // return if no focusable element
+
   if (!firstFocusableElement) {
     return;
   }
@@ -33,7 +33,7 @@ const open = function (dialog) {
   window.setTimeout(() => {
     firstFocusableElement.focus();
 
-    // trapping focus inside the dialog
+  
     focusableElements.forEach((focusableElement) => {
       if (focusableElement.addEventListener) {
         focusableElement.addEventListener('keydown', (event) => {
@@ -64,7 +64,7 @@ const close = function (dialog, trigger) {
   dialog.setAttribute('aria-hidden', true);
   doc.setAttribute('aria-hidden', false);
 
-  // restoring focus
+
   trigger.focus();
 };
 
@@ -72,7 +72,7 @@ triggers.forEach((trigger) => {
   const dialog = document.getElementById(trigger.getAttribute('aria-controls'));
   const dismissTriggers = dialog.querySelectorAll('[data-dismiss]');
 
-  // open dialog
+  
   trigger.addEventListener('click', (event) => {
     event.preventDefault();
 
@@ -87,7 +87,6 @@ triggers.forEach((trigger) => {
     }  
   });
 
-  // close dialog
   dialog.addEventListener('keydown', (event) => {
     if (event.which === keyCodes.escape) {
       close(dialog, trigger);

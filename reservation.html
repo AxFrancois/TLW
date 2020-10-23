@@ -21,26 +21,26 @@
 
 
         <div class ="coeur">
-        <form action="recapitulatif.html" method="GET"> 
+        <form class="reservationForm" action="recapitulatif.html" method="GET"> 
     <fieldset class ="reservation"><legend>Réservation</legend>
 
 <div class ="colonne">
 <p class = "marge">
 <span class = "input_icon"><i class ="fa fa-user" aria-hidden="true" ></i></span>
 <label for ="nom">Nom</label><br>
-<input type = "text" name = "nom" id ="nom" /><br></p>
+<input class ="sizeInput" type = "text" name = "nom" id ="nom" /><br></p>
 <p class = "marge"></p>
 <span class = "input_icon"><i class ="fa fa-user-o" aria-hidden="true"></i></span>
 <label for ="prenom">Prenom</label><br>
-<input type = "text" name = "prenom" id ="prenom" /><br></p>
+<input class ="sizeInput" type = "text" name = "prenom" id ="prenom" /><br></p>
 <p class = "marge"></p>
 <span class = "input_icon"><i class ="fa fa-envelope" aria-hidden="true"></i></span>
 <label for ="email">Email</label><br>
-<input type = "email" name = "email" id ="email"/><br></p>
+<input  class ="sizeInput" type = "email" name = "email" id ="email"/><br></p>
 <p class = "marge"></p>
 <span class = "input_icon"><i class ="fa fa-phone" aria-hidden="true"></i></span>
 <label for ="telephone">n° Telephone</label><br>
-<input type = "tel" name = "telephone" id ="telephone"/><br></p>
+<input class ="sizeInput" type = "tel" name = "telephone" id ="telephone"/><br></p>
 <p class = "marge"></p>
 <span class = "input_icon"><i class ="fa fa-calendar" aria-hidden="true"></i></span>
 <label for ="depart">Date de départ</label><br>
@@ -55,18 +55,18 @@
     <p class = "marge"></p>
 <span class = "input_icon"><i class ="fa fa-group" aria-hidden="true"></i></span>
 <label for ="adultes">Nombre d'adultes</label><br>
-<input type = "number" name = "adultes" id ="adultes"/><br></p>
+<input class ="sizeInput" type = "number" name = "adultes" id ="adultes"/><br></p>
 <p class = "marge"></p>
 <span class = "input_icon"><i class ="fa fa-child" aria-hidden="true"></i></span>
 <label for ="enfants">Nombre d'enfants</label><br>
-<input type = "number" name = "enfants" id ="enfants"/><br></p>
+<input class ="sizeInput" type = "number" name = "enfants" id ="enfants"/><br></p>
 <p class = "marge"></p>
 <input type = "checkbox" name = "petit_dejeuner" id ="petit_dejeuners"/>
 <label for ="petit_dejeuner">Petit déjeuner ?</label><br></p>
 
 <p class = "marge"></p>
 <label for ="renseignement">Demande de renseignement</label><br>
-<input class = "renseignement" type = "text" name = "renseignement" id ="renseignement"/><br></p>
+<input class ="sizeInput" class = "renseignement" type = "text" name = "renseignement" id ="renseignement"/><br></p>
 <label for="prix">Coût total:</label>
 
 <p class = "marge"></p>
@@ -75,7 +75,7 @@
 </textarea></p>
 <br>
 <p class = "marge"></p>
-<input type="submit" class = "send "value = "Envoyer"><br>
+<input type="submit" class = "send "value = "Envoyer" onClick="checkBreakfast('petit_dejeuners')"><br>
 </textarea>
 </p>
 </div>
