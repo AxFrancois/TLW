@@ -155,7 +155,7 @@ div.quantite{
 }
 
 .produits img{
-    width: 100px;
+    width: 200px;
 }
 
 .totalContenuPanier{
@@ -172,5 +172,39 @@ div.quantite{
 }
 .panierTotal{
     width: 10%;
+}
+
+#infosVoyageReserver{
+    width: 50%;
+}
+
+#infosUserReservation{
+    display :flex;
+    float :right;
+    border-radius: 3px;
+    
+    clear : right;
+    padding: 10px;
+}
+
+.recap{
+    padding : 15px;
+    border-color: red;
+    border-radius: 3px;
+
+}
+
+.recapTitle{
+    font-size: 20px;
+
+}
+
+.recapInfosUser label{
+    margin-bottom: 5px;
+    display: block;
+}
+
+.produitReservation img{
+    width: 10px;
 }
 

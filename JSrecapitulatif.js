@@ -14,22 +14,42 @@ function recap(param) {
     
 }
 
-function displayInfos(){
-    nom = recap('nom');
-    prenom = recap('prenom');
-    email = recap('email');
-    telephone = recap('telephone');
-    dateDepart = recap('depart');
-    dateRetour = recap('return');
-    nombreAdultes = recap('adultes');
-    nombreEnfants = recap('enfants');
-    
-  }
-displayInfos();
-//  if (document.getElementById(petit_dejeuners).checked == true){
+let cartItems = localStorage.getItem("produitsInPanier");
+cartItems = JSON.parse(cartItems);
+let listeInfoVoyage = document.querySelector("#infosVoyageReserver");
+if(cartItems && listeInfoVoyage) {
+  listeInfoVoyage.innerHTML = "";
+  Object.values(cartItems).map(item => {
+     listeInfoVoyage.innerHTML += `
+     <div class ="produitReservation">
+       <img src ="./Photos/${item.tag}.jpg">
+       </div>
+       <div class ="prix">${item.prix},00€</div>
+      <div class ="quantite">
+      <span>Vous avez réserver ${item.inPanier} ${item.name}</span>
+      </div>
+      `
+  });
+}
+if (recap('petit_dejeuner') == 'on'){
 
-//       petitDejeuner = "Option : Petit déjeuner"
-//         } ;
-console.log(nombreEnfants);
-document.getElementById('listeInfosUser').innerHTML = 'nombreEnfants' ;
-
+   petitDejeuner = "Option : Petit déjeuner" ;
+    } else {
+   petitDejeuner = "Option : Aucune option choisie" ;
+}
+let listeInfoUser = document.querySelector("#infosUserReservation");
+     listeInfoUser.innerHTML = "";
+     listeInfoUser.innerHTML += `
+    <fieldset class ="recap"><legend class="recapTitle">Récapitulatif</legend>
+     <div class ="recapInfosUser">
+     <label for ="nom"> Nom : `+recap('nom')+`</label>
+     <label for ="prenom">Prenom : `+recap('prenom')+`</label>
+     <label for ="email">Email : `+recap('email')+`</label>
+     <label for ="telephone">n° Telephone : `+recap('telephone')+`</label>
+     <label for ="depart">Date de départ : `+recap('depart')+`</label>
+     <label for ="return">Date de retour : `+recap('return')+`</label>
+     <label for ="adultes">Nombre d'adultes : `+recap('adultes')+`</label>
+     <label for ="enfants">Nombre d'enfants : `+recap('enfants')+`</label>
+     <label for ="breakfast">${petitDejeuner}</label>
+     </div> </fieldset>`;
+     

@@ -93,10 +93,14 @@ div a{
     width: 100%;
 }
 
-.marge {
-    margin-bottom:15px;
+.colonne input{
+    margin-bottom:10px;
  }
-
+.champsObligatoire{
+    bottom: 0px;
+    display: flex;
+    float :right;
+}
 .reservation {
     
     float: right;
@@ -114,6 +118,7 @@ div a{
 }
 .colonne .sizeInput{
     width: 50%;
+    height : 2.2rem
 }
 .remiseAZero{
     float: right;
@@ -238,6 +243,7 @@ h2{
 
 .Coeur{
     text-align: center;
+    
 }
 
 .contactinfos{
@@ -421,9 +427,10 @@ h1{
 .send {
     background-color: #e96e50;
     border:#c1593f;
-    margin-top: 10px;
+    margin-top: 70px;
     padding : 6px 12px;
     border-radius: 5px;
     font : 15px "Calibri" , "Sans serif"
 }
+
 
