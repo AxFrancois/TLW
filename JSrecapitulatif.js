@@ -13,14 +13,23 @@ function recap(param) {
     return vars;
     
 }
-var recap = recap(),
-    nom = recap['nom'],
-    prenom = recap['prenom'],
-    email = recap['email'],
-    telephone = recap['telephone'],
-    nom = recap['nom'],
-    nom = recap['nom'],
-    nom = recap['nom'],
-    nom = recap['nom'],
 
-     
+function displayInfos(){
+    nom = recap('nom');
+    prenom = recap('prenom');
+    email = recap('email');
+    telephone = recap('telephone');
+    dateDepart = recap('depart');
+    dateRetour = recap('return');
+    nombreAdultes = recap('adultes');
+    nombreEnfants = recap('enfants');
+    
+  }
+displayInfos();
+//  if (document.getElementById(petit_dejeuners).checked == true){
+
+//       petitDejeuner = "Option : Petit déjeuner"
+//         } ;
+console.log(nombreEnfants);
+document.getElementById('listeInfosUser').innerHTML = 'nombreEnfants' ;
+

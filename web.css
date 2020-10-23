@@ -112,6 +112,9 @@ div a{
     float: left;
     width: 50%;
 }
+.colonne .sizeInput{
+    width: 50%;
+}
 .remiseAZero{
     float: right;
     background-color: #0f0d70;
@@ -141,7 +144,7 @@ div a{
 }
 
 .ImagesDestinations{
-    width: 300px;
+    width: 340px;
     border:solid black 2px;
     border-radius: 2px;
     margin: 20px;
