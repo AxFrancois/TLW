@@ -110,5 +110,3 @@ triggers.forEach((trigger) => {
     }
   }); 
 });
-
-
