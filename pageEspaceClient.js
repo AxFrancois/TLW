@@ -1,5 +1,6 @@
 
 
+//SOURCE jolicode.com
 
 const triggers = document.querySelectorAll('[aria-haspopup="dialog"]');
 const doc = document.querySelector('.pageEspaceClient');
@@ -44,12 +45,12 @@ const open = function (dialog) {
           }
 
           if (event.shiftKey) {
-            if (event.target === firstFocusableElement) { // shift + tab
+            if (event.target === firstFocusableElement) { 
               event.preventDefault();
 
               lastFocusableElement.focus();
             }
-          } else if (event.target === lastFocusableElement) { // tab
+          } else if (event.target === lastFocusableElement) { 
             event.preventDefault();
 
             firstFocusableElement.focus();

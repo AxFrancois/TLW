@@ -77,7 +77,7 @@ li a{
 
 
 
- #Destinations .Emplacement{
+#Destinations .Emplacement{
     float : left ;
     position : relative ;
     list-style-type: none;
@@ -102,19 +102,17 @@ div a{
     float :right;
 }
 .reservation {
-    
-    float: right;
-    margin-left: auto;
-    margin-right: 5%;
+    margin-right: 10%;
     margin-top: 1%;
-    width:50%; 
     border : 3px solid burlywood ;
     border-radius: 5px;
+
 }
 
 .colonne {
     float: left;
-    width: 50%;
+    width: 45%;
+    margin-left: 10px;
 }
 .colonne .sizeInput{
     width: 50%;
@@ -125,6 +123,7 @@ div a{
     background-color: #0f0d70;
     font : red ;
     font-weight: bold;
+    margin-right: 5px;
 }
 
 #reservationRedirect{
@@ -156,7 +155,13 @@ div a{
     position: relative;
 
 }
-
+.ImagesDestinations:hover .reserver{
+    bottom : 163px;
+    opacity: 0.8;
+    padding: 10px;
+    text-decoration : none;
+    
+}
 .image{
     height: 200px;
     width: 300px;

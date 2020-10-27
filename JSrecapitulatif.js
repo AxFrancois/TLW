@@ -21,11 +21,12 @@ if(cartItems && listeInfoVoyage) {
   listeInfoVoyage.innerHTML = "";
   Object.values(cartItems).map(item => {
      listeInfoVoyage.innerHTML += `
+     
      <div class ="produitReservation">
        <img src ="./Photos/${item.tag}.jpg">
        </div>
-       <div class ="prix">${item.prix},00€</div>
-      <div class ="quantite">
+      <div class ="prixVoyage">${item.prix},00€</div>
+      <div class ="nomVoyage">
       <span>Vous avez réserver ${item.inPanier} ${item.name}</span>
       </div>
       `
