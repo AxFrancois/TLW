@@ -71,16 +71,48 @@ function del(parNom){
     localStorage.setItem("panierNumbers", localStorage.getItem("panierNumbers") -cartItems[parNom].inPanier)
     delete cartItems[parNom]
     localStorage.setItem("produitsInPanier", JSON.stringify(cartItems));
-    debugger
     let PrixTotal = 0
-    for (const item in localStorage.getItem("produitsInPanier")) {
-        PrixTotal = PrixTotal + item.prix * item.inPanier; //PROBLEME ICI
-        console.log(PrixTotal);
+    for (let item in cartItems) {
+        PrixTotal = PrixTotal + cartItems[item].prix * cartItems[item].inPanier; 
     };
     localStorage.setItem("coutTotal", PrixTotal);
     location.reload();
-
 }
+
+function Ajouter(parNom){
+    let cartItems = localStorage.getItem("produitsInPanier");
+    cartItems = JSON.parse(cartItems);
+    debugger
+    localStorage.setItem("panierNumbers", parseInt(localStorage.getItem("panierNumbers"),10) + 1 )
+    cartItems[parNom].inPanier = cartItems[parNom].inPanier + 1
+    localStorage.setItem("produitsInPanier", JSON.stringify(cartItems));
+    let PrixTotal = 0
+    for (let item in cartItems) {
+        PrixTotal = PrixTotal + cartItems[item].prix * cartItems[item].inPanier; 
+    };
+    localStorage.setItem("coutTotal", PrixTotal);
+    location.reload();
+}
+
+
+function Enlever(parNom){
+    let cartItems = localStorage.getItem("produitsInPanier");
+    cartItems = JSON.parse(cartItems);
+    if (cartItems[parNom].inPanier == 1) {
+        del(parNom)}
+    else {
+        localStorage.setItem("panierNumbers", parseInt(localStorage.getItem("panierNumbers"),10) -1 )
+        cartItems[parNom].inPanier = cartItems[parNom].inPanier - 1
+        localStorage.setItem("produitsInPanier", JSON.stringify(cartItems));
+        let PrixTotal = 0
+        for (let item in cartItems) {
+            PrixTotal = PrixTotal + cartItems[item].prix * cartItems[item].inPanier; 
+        };
+        localStorage.setItem("coutTotal", PrixTotal);
+        location.reload();
+    }
+}
+
 
 function displayCart() {
     let cartItems = localStorage.getItem("produitsInPanier");
@@ -88,7 +120,6 @@ function displayCart() {
     let productContainer = document.querySelector(".produits");
     let cartCost = localStorage.getItem('coutTotal');
     
-    console.log(cartItems);
     if(cartItems && productContainer) {
         productContainer.innerHTML = "";
         Object.values(cartItems).map(item => {
@@ -101,10 +132,10 @@ function displayCart() {
              <div class ="prix">${item.prix},00€</div>
             <div class ="quantite">
             <ion-icon class = "diminuer" 
-            name="chevron-back-circle-outline"></ion-icon>
+            name="chevron-back-circle-outline" onclick="Enlever('${item.tag}')"></ion-icon>
             <span>${item.inPanier}</span>
             <ion-icon class = "augmenter" 
-            name="chevron-forward-circle-outline"></ion-icon>
+            name="chevron-forward-circle-outline" onclick="Ajouter('${item.tag}')"></ion-icon>
             </div>
             <div class ="total">
                ${item.inPanier*item.prix},00€
