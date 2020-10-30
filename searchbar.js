@@ -123,7 +123,6 @@ const displayDestinations = (produits) => {
                 <a class ="reserver" href="reservation.html">Réserver</a>
                 </div>
             </li>
-            
         `;
         })
         .join('');
