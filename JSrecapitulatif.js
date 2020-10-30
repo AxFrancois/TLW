@@ -1,3 +1,4 @@
+
 function recap(param) {
 	var vars = {};
 	window.location.href.replace( location.hash, '' ).replace( 
@@ -5,12 +6,11 @@ function recap(param) {
 		function( m, key, value ) { 
 			vars[key] = value !== undefined ? value : '';
 		}
-	);
+    );
 
 	if ( param ) {
 		return vars[param] ? vars[param] : null;	
     }
-    return vars;
     
 }
 
@@ -38,6 +38,7 @@ if (recap('petit_dejeuner') == 'on'){
     } else {
    petitDejeuner = "Option : Aucune option choisie" ;
 }
+
 let listeInfoUser = document.querySelector("#infosUserReservation");
      listeInfoUser.innerHTML = "";
      listeInfoUser.innerHTML += `
@@ -48,7 +49,7 @@ let listeInfoUser = document.querySelector("#infosUserReservation");
      <label for ="email">Email : `+recap('email')+`</label>
      <label for ="telephone">n° Telephone : `+recap('telephone')+`</label>
      <label for ="depart">Date de départ : `+recap('depart')+`</label>
-     <label for ="return">Date de retour : `+recap('return')+`</label>
+     <label for ="retour">Date de retour : `+recap('retour')+`</label>
      <label for ="adultes">Nombre d'adultes : `+recap('adultes')+`</label>
      <label for ="enfants">Nombre d'enfants : `+recap('enfants')+`</label>
      <label for ="breakfast">${petitDejeuner}</label>
