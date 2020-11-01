@@ -4,8 +4,10 @@ body {
     font-family: "serif";
     margin : 0 px;
     padding : 0 px ;
-     background-image: url("Photos/background.jpg");
-     
+    background-image: url("Photos/background.jpg");
+	min-height: 100vh;
+	display: grid;
+	grid-template-rows: auto 1fr auto;
 }
 nav{
     width: 100%;
@@ -186,10 +188,10 @@ div a{
 .PiedPage{
     padding-top: 15px;
     padding-bottom: 5px;
-    margin-top: 10000px;
+    
     text-align: center;
     left: 5%;
-    position: fixed;
+    position: relative;
     bottom: 0px;
     width: 90%;
     border-top: 1px solid black;

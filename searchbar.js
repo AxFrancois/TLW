@@ -1,4 +1,4 @@
-//A REFAIRE EN ENTIER (TEST)
+
 let produits = [
     {
         index :1,

@@ -6,6 +6,7 @@
         <link href="web.css" rel="stylesheet"> 
         <link href="test-css-panier.css" rel="stylesheet">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+        
     </head>
     <body>
         <div class="Header">
@@ -14,7 +15,47 @@
                 <ul>
                     <li class="Home"><a href="Index.html">Page d'accueil <ion-icon name="home-outline"></ion-icon></a></li>
                     <li class="Panier"><a href="panier.html">Panier <i class="fa fa-shopping-basket" aria-hidden="true"></i><span> 0</span></a></li>
-                    <li class="Client"><a href="identification.html">Espace Client <i class="fa fa-user-circle" aria-hidden="true"></i></a></li>
+                    <li class= "Client"><a href="#" type="button" aria-haspopup="dialog" aria-controls="dialog">Espace Client <i class="fa fa-user-circle" aria-hidden="true"></i></a>
+                        <div class="js-page">
+                      <main class="pageEspaceClient">
+                       
+                      </main>
+                      <div id="dialog" role="dialog" aria-labelledby="dialog-title" aria-describedby="dialog-desc" aria-modal="true" aria-hidden="true" tabindex="-1" class="c-dialog">
+                        <div role="document" class="c-dialog__box">
+                          <button type="button" class="close" title="closeWindow" data-dismiss="dialog">X</button>
+                          <h2 id="dialog-title">Espace Client</h2>
+                          <p id="dialog-desc">Identifiez-vous pour accéder à votre compte</p>
+                         <div id ="client-space" >
+                          <div id ="contenuform">
+                            <h2 onclick="connexionForm()" id="connexiontitle">Se connecter</h2>
+                            <form  id = "connexion" method="POST" action="" autocomplete="on">
+                                <span class = "input_icon"><i class ="fa fa-user" aria-hidden="true"></i></span>
+                                <label for = "identifiantUser">Nom d'utilisateur</label></br>
+                                <input type="text" name = "identifiantUser" id = "identifiant" placeholder="Identifiant"/></br>
+                              <br>
+                                <span class = "input_icon"><i class ="fa fa-lock" aria-hidden="true"></i></span>
+                                <label for = "password">Mot de passe</label></br>
+                                <input type="password" name = "password" id = "pass" placeholder="Password"/></br>
+                                <br>
+                                <input type = "checkbox" name ="Rememeber" id ="Rememeber"/>
+                                <label for = "Rememeber">Se souvenir de moi</label>
+                                <br>
+                                <input type="submit" class = "send " value = "Valider"><br>  
+                              </form>
+                              <h2 onclick="inscriptionForm()" id="inscriptiontitle">Créer un compte</h2>
+                              <form id="inscription" style="display: none;">
+                                <label for="identifiantUser">Nom d'utilisateur</label><br>
+                                <input type="text" name="identifiantUser" id="idInscription" /><br>
+                                <br>
+                                <label for="password">Mot de passe : </label><br>
+                                <input class="MdpInscription" id="newPass" type="password" placeholder="Mot de passe"/><br>
+                                <br>
+                                <input class="MdpInscription" id="confirmNewPass" type="password" placeholder="Confirmez votre mot de passe"/><br>
+                                <br>
+                                <button id="signup">Enregistrer</button>
+                           
+                              </form>
+                              <span id ="messageSuccess"></span>
                     <li class="Contact"><a href="Contact.html">À Propos & Contact <i class="fa fa-at" aria-hidden="true"></i></a></li>
             </nav>
         </div>
@@ -48,38 +89,44 @@
 
 <span class = "input_icon"><i class ="fa fa-calendar" aria-hidden="true"></i></span>
 <label for ="depart">Date de départ*</label><br>
-<input type = "date" name = "depart" id ="depart" required/><br>
+<input class ="sizeInput" type = "date" name = "depart" id ="depart" required/><br>
 
 <span class = "input_icon"><i class ="fa fa-calendar-o" aria-hidden="true"></i></span>
 <label for ="retour">Date de retour*</label><br>
-<input type = "date" name = "retour" id ="retour" required/><br>
+<input class ="sizeInput" type = "date" name = "retour" id ="retour" required/><br>
 </div>
 <div class ="colonne">
     <input class="remiseAZero"type="reset" value="Reset">
     
 <span class = "input_icon"><i class ="fa fa-group" aria-hidden="true"></i></span>
 <label for ="adultes">Nombre d'adultes*</label><br>
-<input class ="sizeInput" type = "number" name = "adultes" id ="adultes" required/><br>
-
+<input class ="sizeInput" type = "number" min="0" name = "adultes" id ="adultes" required/><br>
 <span class = "input_icon"><i class ="fa fa-child" aria-hidden="true"></i></span>
 <label for ="enfants">Nombre d'enfants* (-12 ans)</label><br>
-<input class ="sizeInput" type = "number" name = "enfants" id ="enfants" required/><br>
+<input class ="sizeInput" type = "number" min="0" name = "enfants" id ="enfants" required/><br>
 
 <input type = "checkbox" name = "petit_dejeuner" id ="petit_dejeuners"/>
 <label for ="petit_dejeuner">Petit déjeuner ?</label><br><br>
 
 
 <label  for ="renseignement">Demande de renseignement</label><br>
-<input class ="sizeInput" class = "renseignement" type = "text" name = "renseignement" id ="renseignement"/><br>
+<input  class ="sizeInput" class = "renseignement" type = "text" name = "renseignement" id ="renseignement"/><br>
 
 <label class="totalCost" for="prix">Coût total:</label>
 
-
-<textarea id="prix" name="prix"
-          rows="1" cols="8">
-</textarea>
+<span id="prix" name="prix" ></span>
 <br>
-
+<!-- <script type ="text/javascript">
+    let alerteDate = document.querySelector(".colonne");
+    let dateDepart = document.getElementById('depart').value;
+    let dateRetour = document.getElementById('retour').value; faire avec si une differcne negative pas bon sinon ok si = pas bon
+    if(dateDepart == dateRetour){
+      alerteDate.innerHTML+=`Le départ et l'arrivé sont égaux`;
+       }
+    else if (dateDepart> dateRetour){
+        alerteDate.innerHTML+= `La date de retour doit être posterieur à la date de départ`;
+    }
+    </script> -->
 <input type="submit" class = "send "value = "Envoyer"><br>
 
 <span class ="champsObligatoire">* Champ obligatoire</span>
@@ -93,15 +140,10 @@
     <div class="MenuPiedPage">2020 Agence Risque-Tout</div>
     <div class="MenuPiedPage"><a href="Contact.html">À Propos & Contact</a></div>
 </footer>
-<script type ="text/javascript">
-var dateDepart = document.getElementById('depart').value;
-var dateRetour = document.getElementById('retour').value;
-if(dateDepart == dateRetour){
-   document.write("Le départ et l'arrivé sont égaux");
-   }
-else if (dateDepart> dateRetour)
-    document.write('La date de retour doit être posterieur à la date de départ');
-</script>
+
 <script src="JSrecapitulatif.js"></script>
 <script src = "script.js"></script>
+<script src="pageEspaceClient.js"></script>
+<script src="connection.js"></script>
 </body>
+</html>
