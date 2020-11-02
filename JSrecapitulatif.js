@@ -1,26 +1,4 @@
 
- 
-let totalCost = document.getElementById("prix");
-let coutVoyage = localStorage.getItem('coutTotal');
-idInput = ["depart", "retour","enfants","adultes"]
-for (let i=0; i <= idInput.length-1; i++) {
-document.getElementById(idInput[i]).addEventListener('input', function() {
-  var dateDepart = new Date(document.getElementById('depart').value);
-  var dateRetour = new Date(document.getElementById('retour').value)
-  var nombreAdultes = document.getElementById('adultes').value;
-  var nombreEnfants = document.getElementById('enfants').value;
-  var differenceDate = dateRetour-dateDepart;
-  var dureeSejour = differenceDate = differenceDate/86400000;  
-  if (document.getElementById('petit_dejeuners').checked == true){
-  totalCost.innerHTML = dureeSejour*coutVoyage*nombreAdultes+dureeSejour*coutVoyage*0.4*nombreEnfants+12*dureeSejour*(nombreEnfants+nombreAdultes)+'€'
-    } else {
-      totalCost.innerHTML = dureeSejour*coutVoyage*nombreAdultes+dureeSejour*coutVoyage*0.4*nombreEnfants+'€'
- }
-  
-});}
-
-
-
 
 function recap(param) {
 	var vars = {};

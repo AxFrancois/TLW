@@ -66,7 +66,7 @@
             <div id = "infosVoyageReserver">
             </div>
         </fieldset>
-    <form class="reservationForm" action="recapitulatif.html" method="GET"> 
+    <form class="reservationForm" action="recapitulatif.html" method="GET" > 
     <fieldset class ="reservation"><legend>Réservation</legend>
 
 <div class ="colonne">
@@ -105,7 +105,7 @@
 <label for ="enfants">Nombre d'enfants* (-12 ans)</label><br>
 <input class ="sizeInput" type = "number" min="0" name = "enfants" id ="enfants" required/><br>
 
-<input type = "checkbox" name = "petit_dejeuner" id ="petit_dejeuners"/>
+<input type = "checkbox" name = "petit_dejeuners" id ="petit_dejeuners"/>
 <label for ="petit_dejeuner">Petit déjeuner ?</label><br><br>
 
 
@@ -114,20 +114,9 @@
 
 <label class="totalCost" for="prix">Coût total:</label>
 
-<span id="prix" name="prix" ></span>
+<span id="prix" name="prix" >0 €</span>
 <br>
-<!-- <script type ="text/javascript">
-    let alerteDate = document.querySelector(".colonne");
-    let dateDepart = document.getElementById('depart').value;
-    let dateRetour = document.getElementById('retour').value; faire avec si une differcne negative pas bon sinon ok si = pas bon
-    if(dateDepart == dateRetour){
-      alerteDate.innerHTML+=`Le départ et l'arrivé sont égaux`;
-       }
-    else if (dateDepart> dateRetour){
-        alerteDate.innerHTML+= `La date de retour doit être posterieur à la date de départ`;
-    }
-    </script> -->
-<input type="submit" class = "send "value = "Envoyer"><br>
+<input type="submit" class = "send " id="btnEnvoi" value = "Envoyer"><br>
 
 <span class ="champsObligatoire">* Champ obligatoire</span>
 </div>
@@ -141,6 +130,7 @@
     <div class="MenuPiedPage"><a href="Contact.html">À Propos & Contact</a></div>
 </footer>
 
+<script src ="totalCout.js"></script>
 <script src="JSrecapitulatif.js"></script>
 <script src = "script.js"></script>
 <script src="pageEspaceClient.js"></script>
