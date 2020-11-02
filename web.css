@@ -244,10 +244,12 @@ h2{
     margin-right: auto;
     margin-top: 10px;
     border : 3px solid burlywood ;
-    border-radius: 5px;
+    border-radius: 5px; 
 }
 
-
+.infosContact input{
+    margin-bottom: 10px;
+}
 /*----------------------------------------------BOUTON RETOUR ---------------------------------------------------------------------*/
 
 .Coeur{
@@ -281,8 +283,8 @@ nav.nav2{
     text-align: center;
     border-radius: 4px;
     position: fixed;
-    bottom: 30px;
-    right: 30px;
+    bottom: 20px;
+    right: 10px;
     transition: background-color .3s,
       opacity .5s, visibility .5s;
     opacity: 0;

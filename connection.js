@@ -93,9 +93,28 @@ function deco(){
 }
 
 
-//  let bdd = {user1 : {userName :"paul69" ,motDePasse : 123},user2:{userName :"leo69" ,motDePasse :678}};
+ let bdd = [ {tag : 'user1' , userName :"paul69" ,motDePasse : 123},{tag : 'user2' , userName :"leo69" ,motDePasse :678}];
 
+ for (let i=0; i < bdd.length; i++) {
+     setIdentifiants(bdd[i])
+ }
+ function setIdentifiants(bdd) {
+    let bddItems = localStorage.getItem('coupleID');
+    bddItems = JSON.parse(bddItems);
+    if(bddItems !== null) {
+        if(bddItems[bdd.tag] == undefined) {
+            bddItems ={
+                ...bddItems,
+                [bdd.tag] : bdd
+            }
+        }
+        
+    }  else{
+       
+       bddItems ={
+            [bdd.tag] : bdd
+       }
+    }
     
-//  localStorage.setItem('identifiantUser1',bdd.user1.userName);
-//  localStorage.setItem('password1',bdd.user1.motDePasse);
-
+    localStorage.setItem("coupleID", JSON.stringify(bddItems));
+}
