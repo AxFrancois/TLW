@@ -4,14 +4,18 @@
 document.getElementById('connexiontitle').style.display ="none";
 function inscriptionForm(){
     document.getElementById('dialog-desc').style.display ="none";
+    document.getElementById('connexiontitle').style.display ='block';
     if (document.getElementById('inscription').style.display ==='none'){
+        
         document.getElementById('inscription').style.display = 'block';
+        
         if(document.getElementById('inscriptionReussi')){
             document.getElementById('inscriptionReussi').style.display='none';
         }
     } 
     document.getElementById('connexion').style.display ='none';
     document.getElementById('inscriptiontitle').style.display ='none';
+    
 }
 function connexionForm(){
     if (document.getElementById('connexion').style.display ==='none'){
@@ -20,7 +24,8 @@ function connexionForm(){
     document.getElementById('dialog-desc').style.display = 'block'
     document.getElementById('messageSuccess').style.display = 'none';
     document.getElementById('connexiontitle').style.display = 'none';
-
+    document.getElementById('inscription').style.display = 'none';
+    document.getElementById('inscriptiontitle').style.display = 'block';
 }
 document.getElementById('connexion').onsubmit = function(event){
     event.preventDefault(); // On empêche le formulaire de recharger la page
@@ -37,22 +42,47 @@ function inscriptionStape(){
     if (document.getElementById('newPass').value==document.getElementById('confirmNewPass').value == "" || document.getElementById('idInscription').value ==""){
         alert("Veuillez remplir les champs"); 
     }
-    if(document.getElementById('newPass').value==document.getElementById('confirmNewPass').value && document.getElementById('idInscription').value!=localStorage.getItem('identifiantUser')){
-        localStorage.setItem('password',document.getElementById('newPass').value);
-        localStorage.setItem('identifiantUser',document.getElementById('idInscription').value);
+   
+    var userAlreadyExist = false;
+    let bddItems = localStorage.getItem('coupleID');
+    bddItems = JSON.parse(bddItems);
+    for (let i=0; i < Object.keys(bddItems).length; i++) { 
+       if( document.getElementById('idInscription').value==bddItems[["user"+(i+1)]].userName){
+           userAlreadyExist = true ;
+       };
+    }
+
+    if(document.getElementById('newPass').value==document.getElementById('confirmNewPass').value && userAlreadyExist == false){
+        var newUser = {tag : 'user'+(bdd.length+1) , userName :document.getElementById('idInscription').value ,motDePasse : document.getElementById('confirmNewPass').value};
+        bdd.push(newUser);
+        setIdentifiants(newUser);
+        // localStorage.setItem('password',document.getElementById('newPass').value);
+        // localStorage.setItem('identifiantUser',document.getElementById('idInscription').value);
         document.getElementById('inscription').style.display = 'none';
         document.getElementById('messageSuccess').innerHTML = "Inscription réussi vous pouvez vous connecter";
         document.getElementById('connexiontitle').style.display = 'block';
-    } else if(document.getElementById('idInscription').value==localStorage.getItem('identifiantUser')){
+    }   else if(userAlreadyExist = true){
         alert('Cet identifiant existe déjà');
-    } else{
+    }   else{
         alert('Les mots de passe doivent être identique');
     }
 }
 
 
 function connexionStape(){
-    if (document.getElementById('identifiant').value==localStorage.getItem('identifiantUser') && document.getElementById('pass').value==localStorage.getItem('password')){
+    let bddItems = localStorage.getItem('coupleID');
+    bddItems = JSON.parse(bddItems);
+    var connexionOK = false;
+    for (let i=0; i < Object.keys(bddItems).length; i++) { 
+         nb = i ;
+        nb = i.toString();
+        if( document.getElementById('pass').value==bddItems[["user"+(i+1)]].motDePasse && document.getElementById('identifiant').value==bddItems[["user"+(i+1)]].userName){
+           
+        connexionOK = true ;
+       };
+    }
+    
+    if (connexionOK == true){
         sessionStorage.setItem('userConnected','true');
         connexionText.id = 'messageConnexionOn';
         connexionText.innerHTML="Vous êtes connecté en tant que "+document.getElementById('identifiant').value;
@@ -68,6 +98,7 @@ function connexionStape(){
         document.getElementById('messageSuccess').style.display ='none';
     } else{
         alert('Le mot de passe ou identifiant est invalide');
+        console.log(bddItems.user+(1).motDePasse,bddItems.user+(1).userName);
     }
 }
 
@@ -93,10 +124,9 @@ function deco(){
 }
 
 
- let bdd = [ {tag : 'user1' , userName :"paul69" ,motDePasse : 123},{tag : 'user2' , userName :"leo69" ,motDePasse :678}];
-
- for (let i=0; i < bdd.length; i++) {
-     setIdentifiants(bdd[i])
+ let bdd = [ {tag : 'user1' , userName :"paul69" ,motDePasse : "123"}, {tag : 'user2' , userName :"leo69" ,motDePasse :"678"}];
+ for (let i=0; i <= bdd.length-1; i++) { 
+    setIdentifiants(bdd[i]);
  }
  function setIdentifiants(bdd) {
     let bddItems = localStorage.getItem('coupleID');

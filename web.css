@@ -438,10 +438,18 @@ h1{
 .send {
     background-color: #e96e50;
     border:#c1593f;
-    margin-top: 70px;
+    margin-top: 30px;
     padding : 6px 12px;
     border-radius: 5px;
     font : 15px "Calibri" , "Sans serif"
 }
 
+h2#inscriptiontitle{
+    padding-top: 10px;
+}
+
+p#dialog-desc,
+h2#connexiontitle{
+    padding: 10px;
+}
 
