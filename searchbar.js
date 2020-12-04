@@ -98,7 +98,7 @@ searchBar.addEventListener('keyup', (e) => {
 
     const filteredDestination = produits.filter((Emplacement) => {
         return (
-            Emplacement.tag.toLowerCase().includes(searchString)
+            Emplacement.tag.toLowerCase().includes(searchString)    
         );
     });
     displayDestinations(filteredDestination);
