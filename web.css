@@ -268,12 +268,23 @@ h2{
     text-align: center;
 }
 
-nav.nav2{
-    width: 100%;
+nav.Nav2{
+    width: 90%;
     background-color : #424558;
-    display: inline-block;
+    display: flex;
+    justify-content: space-between;
+    margin: auto;
 }
-
+.tri-before:before{
+    content: "\f1de";
+    font-family: FontAwesome;
+}
+.tri-filter:hover{
+    cursor: pointer;
+    font-style: bold ;
+    background-color : #D82D25;
+    color : #481AC2
+}
 
 #button {
     display: inline-block;
