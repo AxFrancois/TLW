@@ -221,7 +221,7 @@ div a{
   }
 
 .Intro{
-    background-color : aliceblue;
+    background: radial-gradient(ellipse farthest-corner, red, yellow 10%, #1e90ff 50%, beige);
     padding : 30px;
     text-align: center;
 }
