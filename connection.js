@@ -74,8 +74,6 @@ function connexionStape(){
     bddItems = JSON.parse(bddItems);
     var connexionOK = false;
     for (let i=0; i < Object.keys(bddItems).length; i++) { 
-         nb = i ;
-        nb = i.toString();
         if( document.getElementById('pass').value==bddItems[["user"+(i+1)]].motDePasse && document.getElementById('identifiant').value==bddItems[["user"+(i+1)]].userName){
            
         connexionOK = true ;

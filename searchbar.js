@@ -132,3 +132,4 @@ const displayDestinations = (produits) => {
 
 
 loadDestinations();
+
