@@ -74,13 +74,21 @@
             <button>Rechercher</button> 
             <!--Option de tri-->
         </div>
-            <div class ="tri-filter">
+            <div class ="tri-filter" >
                 <span class = "tri-icon"><i class = 'tri-before'></i></span>
-                <span class = "tri-text"><a class="filter">Filtrer</a></span>
+                <span class = "tri-text"><a class="filter" onclick="openCloseFilter()">Filtrer</a></span>
+                
             </div>
         </nav>
-        
-        
+        <div id="hideContentFiltre" hidden>
+            <p class = "filtrePrix">Filtrer par prix :</p>
+            <div class = "cursorContent">
+            <p class = "PrixMin">min : <span id = "valuePrixMin"></span> </p>
+            <input id ="rangeMin" class = "prixRangeMin" type = 'range' min ="0" max = "2000">
+            <p class = "PrixMax">max : <span id = "valuePrixMax"></span> </p>
+            <input id="rangeMax" class = "prixRangeMax" type = 'range'min ="0" max = "2000">
+        </div>
+        </div>
         <a id="button"></a>
         <div class="Contenu">
             <ul id="Destinations">

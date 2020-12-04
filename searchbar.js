@@ -104,6 +104,49 @@ searchBar.addEventListener('keyup', (e) => {
     displayDestinations(filteredDestination);
 });
 
+
+var curseurMin = document.getElementById('rangeMin')
+var valueMin = document.getElementById('valuePrixMin')
+curseurMin.value = 0
+valueMin.innerHTML = curseurMin.value
+
+var curseurMax = document.getElementById('rangeMax')
+var valueMax = document.getElementById('valuePrixMax')
+curseurMax.value = 2000
+valueMax.innerHTML = curseurMax.value
+
+curseurMin.oninput = function(){
+    valueMin.innerHTML = this.value;
+}
+
+curseurMax.oninput = function(){
+    valueMax.innerHTML = this.value;
+}
+
+curseurMin.addEventListener('mousemove', function() {
+    
+    const filteredDestination = produits.filter((Emplacement) => {
+        for (let i=0; i < produits.length; i++) { 
+        if(Emplacement.prix > curseurMin.value){
+            return ( Emplacement.tag.toLowerCase()
+            );}
+        }
+    });
+    displayDestinations(filteredDestination);
+});
+curseurMax.addEventListener('mousemove', function() {
+    
+    const filteredDestination = produits.filter((Emplacement) => {
+        for (let i=0; i < produits.length; i++) {
+            if(Emplacement.prix < curseurMax.value){
+                return ( Emplacement.tag.toLowerCase()
+                );}
+        }
+    });
+    displayDestinations(filteredDestination);  
+});
+
+
 const loadDestinations = async () => {
     displayDestinations(produits);
     
@@ -111,7 +154,6 @@ const loadDestinations = async () => {
 
 const displayDestinations = (produits) => {
     const htmlString = produits.map((Emplacement) => {
-            
         return `
             <li class="Emplacement">
                 <div class="ImagesDestinations">            
@@ -128,8 +170,21 @@ const displayDestinations = (produits) => {
         .join('');
         //console.log(htmlString)
         DestinationsList.innerHTML = htmlString;
+
 };
 
 
 loadDestinations();
+
+function openCloseFilter(){
+    var divContenu = document.getElementById('hideContentFiltre')
+         
+    if(divContenu.style.display == 'block')
+        divContenu.style.display = 'none';
+    else
+        divContenu.style.display = 'block';
+}
+
+
+//----------------------------FILTRE--------------------------------------//
 
