@@ -104,6 +104,8 @@ searchBar.addEventListener('keyup', (e) => {
     displayDestinations(filteredDestination);
 });
 
+
+
 const loadDestinations = async () => {
     displayDestinations(produits);
     
@@ -111,16 +113,15 @@ const loadDestinations = async () => {
 
 const displayDestinations = (produits) => {
     const htmlString = produits.map((Emplacement) => {
-            
         return `
             <li class="Emplacement">
                 <div class="ImagesDestinations">            
                 <img src="Photos/${Emplacement.tag}.jpg" alt="${Emplacement.tag}" class="image" style="width:100%">
                 <div class="Overlay">
-                <div class="InfoDestination">${Emplacement.tag} | <span id="zone_heure${Emplacement.index}"></span> | <span id="zone_meteo${Emplacement.index}"></span> </div>    ${Emplacement.prix}€
+                <div class="InfoDestination">${Emplacement.tag} | <span id="zone_heure${Emplacement.index}"></span> | <span id="zone_meteo${Emplacement.index}"></span> </div>${Emplacement.prix}€
                 </div>
-                <a class="add-panier panier" href="#">Ajouter au panier</a>
-                <a class ="reserver" href="reservation.html">Réserver</a>
+                <a class="add-panier" id="panier" href="#">Ajouter au panier</a>
+                <a  id = "reserver" href="reservation.html?id=${Emplacement.index}">Réserver</a>
                 </div>
             </li>
         `;
@@ -128,8 +129,62 @@ const displayDestinations = (produits) => {
         .join('');
         //console.log(htmlString)
         DestinationsList.innerHTML = htmlString;
+
 };
 
 
 loadDestinations();
 
+
+
+
+//----------------------------FILTRE--------------------------------------//
+function openCloseFilter(){
+    var divContenu = document.getElementById('hideContentFiltre')
+         
+    if(divContenu.style.display == 'block')
+        divContenu.style.display = 'none';
+    else
+        divContenu.style.display = 'block';
+}
+
+var curseurMin = document.getElementById('rangeMin')
+var valueMin = document.getElementById('valuePrixMin')
+curseurMin.value = 0
+valueMin.innerHTML = curseurMin.value
+
+var curseurMax = document.getElementById('rangeMax')
+var valueMax = document.getElementById('valuePrixMax')
+curseurMax.value = 2000
+valueMax.innerHTML = curseurMax.value
+
+curseurMin.oninput = function(){
+    valueMin.innerHTML = this.value;
+}
+
+curseurMax.oninput = function(){
+    valueMax.innerHTML = this.value;
+}
+
+curseurMin.addEventListener('mousemove', function() {
+    
+    const filteredDestination = produits.filter((Emplacement) => {
+        for (let i=0; i < produits.length; i++) { 
+        if(Emplacement.prix > curseurMin.value && Emplacement.prix < curseurMax.value){
+            return ( Emplacement.tag.toLowerCase()
+            );}
+        }
+    });
+    displayDestinations(filteredDestination);
+});
+curseurMax.addEventListener('mousemove', function() {
+    
+    const filteredDestination = produits.filter((Emplacement) => {
+        for (let i=0; i < produits.length; i++) {
+            if(Emplacement.prix > curseurMin.value && Emplacement.prix < curseurMax.value){
+                return ( Emplacement.tag.toLowerCase()
+                );}
+        }
+    });
+    displayDestinations(filteredDestination);  
+});
