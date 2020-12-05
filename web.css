@@ -251,8 +251,6 @@ h2{
     text-align: center;
     margin : 0px ;
     background-color: white;
-    width: auto;
-    height: auto;
 }
 
 .contactinfos{
@@ -463,7 +461,7 @@ h2#connexiontitle{
 }
 
 
-#Map{
+.Coeur2, #Map{
     margin: 100px 50px 50px 50px;
     width: auto;
     height: auto;
