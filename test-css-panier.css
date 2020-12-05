@@ -23,7 +23,7 @@
     overflow: hidden;
 }
 
-.add-panier{
+#panier{
     right: 50%;
     position: absolute;
     width: 50%;
@@ -36,14 +36,19 @@
     
 }
 
-.ImagesDestinations:hover .panier{
+.ImagesDestinations:hover #panier{
     bottom : 163px;
     opacity: 0.8;
     padding : 10px;
     text-decoration : none;
 }
-.reserver{
-    
+.ImagesDestinations:hover #reserver{
+    bottom : 163px;
+    opacity: 0.8;
+    padding : 10px;
+    text-decoration : none;
+}
+#reserver{
     position: absolute;
     width: 50%;
     background-color: rgb(255, 253, 253);
@@ -52,7 +57,7 @@
     color: rgb(19, 59, 236);
     cursor: pointer;
     text-align: center;
-    
+    float: right;
 }
 
 

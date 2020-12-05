@@ -105,6 +105,49 @@ searchBar.addEventListener('keyup', (e) => {
 });
 
 
+
+const loadDestinations = async () => {
+    displayDestinations(produits);
+    
+};
+
+const displayDestinations = (produits) => {
+    const htmlString = produits.map((Emplacement) => {
+        return `
+            <li class="Emplacement">
+                <div class="ImagesDestinations">            
+                <img src="Photos/${Emplacement.tag}.jpg" alt="${Emplacement.tag}" class="image" style="width:100%">
+                <div class="Overlay">
+                <div class="InfoDestination">${Emplacement.tag} | <span id="zone_heure${Emplacement.index}"></span> | <span id="zone_meteo${Emplacement.index}"></span> </div>${Emplacement.prix}€
+                </div>
+                <a class="add-panier" id="panier" href="#">Ajouter au panier</a>
+                <a  id = "reserver" href="reservation.html">Réserver</a>
+                </div>
+            </li>
+        `;
+        })
+        .join('');
+        //console.log(htmlString)
+        DestinationsList.innerHTML = htmlString;
+
+};
+
+
+loadDestinations();
+
+
+
+
+//----------------------------FILTRE--------------------------------------//
+function openCloseFilter(){
+    var divContenu = document.getElementById('hideContentFiltre')
+         
+    if(divContenu.style.display == 'block')
+        divContenu.style.display = 'none';
+    else
+        divContenu.style.display = 'block';
+}
+
 var curseurMin = document.getElementById('rangeMin')
 var valueMin = document.getElementById('valuePrixMin')
 curseurMin.value = 0
@@ -127,7 +170,7 @@ curseurMin.addEventListener('mousemove', function() {
     
     const filteredDestination = produits.filter((Emplacement) => {
         for (let i=0; i < produits.length; i++) { 
-        if(Emplacement.prix > curseurMin.value){
+        if(Emplacement.prix > curseurMin.value && Emplacement.prix < curseurMax.value){
             return ( Emplacement.tag.toLowerCase()
             );}
         }
@@ -138,53 +181,10 @@ curseurMax.addEventListener('mousemove', function() {
     
     const filteredDestination = produits.filter((Emplacement) => {
         for (let i=0; i < produits.length; i++) {
-            if(Emplacement.prix < curseurMax.value){
+            if(Emplacement.prix > curseurMin.value && Emplacement.prix < curseurMax.value){
                 return ( Emplacement.tag.toLowerCase()
                 );}
         }
     });
     displayDestinations(filteredDestination);  
 });
-
-
-const loadDestinations = async () => {
-    displayDestinations(produits);
-    
-};
-
-const displayDestinations = (produits) => {
-    const htmlString = produits.map((Emplacement) => {
-        return `
-            <li class="Emplacement">
-                <div class="ImagesDestinations">            
-                <img src="Photos/${Emplacement.tag}.jpg" alt="${Emplacement.tag}" class="image" style="width:100%">
-                <div class="Overlay">
-                <div class="InfoDestination">${Emplacement.tag} | <span id="zone_heure${Emplacement.index}"></span> | <span id="zone_meteo${Emplacement.index}"></span> </div>    ${Emplacement.prix}€
-                </div>
-                <a class="add-panier panier" href="#">Ajouter au panier</a>
-                <a class ="reserver" href="reservation.html">Réserver</a>
-                </div>
-            </li>
-        `;
-        })
-        .join('');
-        //console.log(htmlString)
-        DestinationsList.innerHTML = htmlString;
-
-};
-
-
-loadDestinations();
-
-function openCloseFilter(){
-    var divContenu = document.getElementById('hideContentFiltre')
-         
-    if(divContenu.style.display == 'block')
-        divContenu.style.display = 'none';
-    else
-        divContenu.style.display = 'block';
-}
-
-
-//----------------------------FILTRE--------------------------------------//
-

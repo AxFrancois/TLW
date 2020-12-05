@@ -144,11 +144,6 @@ div a{
 }
 
 
-.Coeur{
-    margin : auto ;
-    background-color: white;
-}
-
 .ImagesDestinations{
     width: 340px;
     border:solid black 2px;
@@ -254,7 +249,8 @@ h2{
 
 .Coeur{
     text-align: center;
-    
+    margin : 0px ;
+    background-color: white;
 }
 
 .contactinfos{
