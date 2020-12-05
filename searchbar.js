@@ -121,7 +121,7 @@ const displayDestinations = (produits) => {
                 <div class="InfoDestination">${Emplacement.tag} | <span id="zone_heure${Emplacement.index}"></span> | <span id="zone_meteo${Emplacement.index}"></span> </div>${Emplacement.prix}€
                 </div>
                 <a class="add-panier" id="panier" href="#">Ajouter au panier</a>
-                <a  id = "reserver" href="reservation.html">Réserver</a>
+                <a  id = "reserver" href="reservation.html?id=${Emplacement.index}">Réserver</a>
                 </div>
             </li>
         `;

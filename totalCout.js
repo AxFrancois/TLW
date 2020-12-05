@@ -51,3 +51,30 @@ if(cartItems && listeInfoVoyage) {
       `
   });
 }
+
+const displayReserveDestinations = (produits) => {
+  produits.map(Emplacement => {
+  listeInfoVoyage.innerHTML += `
+  <div class ="produitReservation">
+    <img src ="./Photos/${Emplacement.tag}.jpg">
+    </div>
+   <div class ="prixVoyage">${Emplacement.prix},00€</div>
+   <div class ="nomVoyage">
+   <span>Vous avez réservé ${Emplacement.inPanier+1} ${Emplacement.name}</span>
+   </div>
+   `
+});
+}
+let sejour_id = new URLSearchParams(window.location.search).get("id")
+console.log(sejour_id)
+
+const produitReserver = produits.filter((Emplacement) => {
+      if (Emplacement.index == sejour_id){
+        console.log(Emplacement)
+        return(
+          
+          Emplacement.tag.toLowerCase()
+        )};
+  });
+  displayReserveDestinations(produitReserver)
+  
