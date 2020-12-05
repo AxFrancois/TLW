@@ -122,8 +122,8 @@ div a{
 }
 .remiseAZero{
     float: right;
-    background-color: #0f0d70;
-    font : red ;
+    background-color: #ffffff;
+    color : red ;
     font-weight: bold;
     margin-right: 5px;
 }
@@ -284,7 +284,7 @@ nav.Nav2{
 
 #button {
     display: inline-block;
-    background-color: #146ff7;
+    background-color: #d37f12;
     width: 50px;
     height: 50px;
     text-align: center;
