@@ -155,40 +155,7 @@ function displayCart() {
 }
 rechargementArticleNumbers();
 displayCart();
-/*
-document.getElementById('deleteItem1').onclick = function() {
-    alert("button was clicked");}
-;
-*/
-    /*d.preventDefault();
-  
-    var items = JSON.parse(localStorage["items"]);
-    for (var i = 0; i < items.length; i++) {
-       if(items[i].itemId == 3){
-         items.splice(i,1);
-         break;
-       }
-    }
-  })
-*/
-/*
-function setDeleteButtons(){ 
-    removeButtons = document.querySelectorAll(".deleteItem"); 
-    var cartItems = localStorage.getItem("produitsInPanier"); 
-    cartItems = JSON.parse(cartItems); 
-    
-    for(i=0; i < removeButtons.length; i++){ 
-        
-        removeButtons[i].addEventListener("click", function (e) {
-        
-        delete cartItems[e.currentTarget.dataset.tag];
-        localStorage.setItem("produitsInPanier", JSON.stringify(cartItems));
-     });
-    }
-}
 
-setDeleteButtons();
-*/
 
 //------------------------------------BOUTON RETOUR-------------------------------------------------------------------//
 jQuery(document).ready(function() {

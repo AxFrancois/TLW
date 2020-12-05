@@ -341,39 +341,39 @@ h1{
     -webkit-overflow-scrolling: touch;
     background-color: rgba(black, .75);
     transition: .2s;
-  }
+}
   
   
-  .c-dialog__box {
-      background-color: #fff;
-      border-radius: .6rem;
-      border: 2px solid turquoise;
-      color: #25465f;
-      overflow: auto;
-      position: relative;
-      padding: 3rem;
-      margin: auto;
-      max-height: calc(100vh - 4rem);
-      text-align: center;
-      z-index: 1;
+.c-dialog__box {
+    background-color: #fff;
+    border-radius: .6rem;
+    border: 2px solid turquoise;
+    color: #25465f;
+    overflow: auto;
+    position: relative;
+    padding: 3rem;
+    margin: auto;
+    max-height: calc(100vh - 4rem);
+    text-align: center;
+    z-index: 1;
       
-  }
+}
   
   
-  .c-dialog[aria-hidden="true"] {
+.c-dialog[aria-hidden="true"] {
     visibility: hidden;
     opacity: 0;
-  }
+}
   
-  .close{
-      background: none;
-      position: absolute;
-      top: .6rem;
-      right: .6rem;
-      height: 1.5rem;
-      width: 1.5rem;
-      z-index: 1;
-  }
+.close{
+    background: none;
+    position: absolute;
+    top: .6rem;
+    right: .6rem;
+    height: 1.5rem;
+    width: 1.5rem;
+    z-index: 1;
+}
   
 #inscriptiontitle{
       font: 1.2rem italic;
@@ -449,5 +449,11 @@ h2#connexiontitle{
     padding: 10px;
 }
 
-/*----------------------------------------------FILTRE------------------------------------------------------------*/
+
+.Coeur, #Map{
+    margin: 100px 50px 50px 50px;
+    width: auto;
+    height: auto;
+}
+
 
