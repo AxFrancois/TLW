@@ -210,7 +210,7 @@ div a{
 .Overlay {
     position: absolute;
     bottom: 5px;
-    left: 50%;
+    left: 50%; 
     transform: translate(-50%, -50%);
     text-align: center;
     display: table;
@@ -221,7 +221,7 @@ div a{
   }
 
 .Intro{
-    background: radial-gradient(ellipse farthest-corner, red, yellow 10%, #1e90ff 50%, beige);
+    background: radial-gradient(ellipse farthest-corner,  white 50%, rgba(0,0,0,0),);
     padding : 30px;
     text-align: center;
 }
@@ -268,23 +268,12 @@ h2{
     text-align: center;
 }
 
-nav.Nav2{
-    width: 90%;
+nav.nav2{
+    width: 100%;
     background-color : #424558;
-    display: flex;
-    justify-content: space-between;
-    margin: auto;
+    display: inline-block;
 }
-.tri-before:before{
-    content: "\f1de";
-    font-family: FontAwesome;
-}
-.tri-filter:hover{
-    cursor: pointer;
-    font-style: bold ;
-    background-color : #D82D25;
-    color : #481AC2
-}
+
 
 #button {
     display: inline-block;
