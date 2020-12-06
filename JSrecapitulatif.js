@@ -13,6 +13,11 @@ function recap(param) {
     
 }
 
+//----------------Générateur aléatoire pour l'ID---------------//
+function getRandomInt(max) {
+  return Math.floor(Math.random() * Math.floor(max));
+}
+
 let cartItems = localStorage.getItem("produitsInPanier");
 cartItems = JSON.parse(cartItems);
 let listeInfoVoyage = document.querySelector("#infosVoyageReserver");
@@ -37,19 +42,22 @@ if (recap('petit_dejeuner') == 'on'){
    petitDejeuner = "Option : Aucune option choisie" ;
 }
 
+console.log(recap('email'))
+
 let listeInfoUser = document.querySelector("#infosUserReservation");
      listeInfoUser.innerHTML += `
     <fieldset class ="recap"><legend class="recapTitle">Récapitulatif</legend>
      <div class ="recapInfosUser">
      <label for ="nom"> Nom : `+recap('nom')+`</label>
      <label for ="prenom">Prenom : `+recap('prenom')+`</label>
-     <label for ="email">Email : `+recap('email')+`</label>
+     <label for ="email">Email : `+recap('email').replace("%40","@")+`</label>
      <label for ="telephone">n° Telephone : `+recap('telephone')+`</label>
      <label for ="depart">Date de départ : `+recap('depart')+`</label>
      <label for ="retour">Date de retour : `+recap('retour')+`</label>
      <label for ="adultes">Nombre d'adultes : `+recap('adultes')+`</label>
      <label for ="enfants">Nombre d'enfants : `+recap('enfants')+`</label>
-     <label for ="breakfast">${petitDejeuner}</label>
+     <label for ="breakfast">Petit déjeuner : `+(recap('petit_dejeuners').replace("on","Oui")).replace("off","Non")+`</label>
+     <label for ="IDReservation">IDReservation : ${getRandomInt(10000)}</label>
      </div> </fieldset>`;
      
 
