@@ -82,7 +82,16 @@
 
 </div>
 <form action="reservation.html" id="reservationRedirect">
-<input class="reserved" type="submit" value="Réserver"></input>
+<input class="reserved" type="submit" value="Réserver" id="submit"></input>
+<script>
+        var bt = document.getElementById('submit')
+        console.log(bt)
+        if (localStorage.getItem("panierNumbers")==0 || localStorage.getItem("panierNumbers")==false) {
+            bt.disabled = false;
+        }
+        else {
+            bt.disabled = true;}
+</script>
 </form>
 
 <footer class="PiedPage">

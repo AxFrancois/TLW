@@ -1,4 +1,3 @@
-
 let totalCost = document.getElementById("prix");
 let coutVoyage = localStorage.getItem('coutTotal');
 idInput = ["depart", "retour","enfants","adultes","petit_dejeuners"]

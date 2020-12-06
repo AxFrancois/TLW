@@ -163,8 +163,26 @@ function displayCart() {
 
 
 }
+
+function PanierVide(){
+    var bt = document.getElementById('submit')
+    console.log(localStorage.getItem("panierNumbers")==0)
+    console.log(localStorage.getItem("panierNumbers")==null)
+    if (localStorage.getItem("panierNumbers")==0 || localStorage.getItem("panierNumbers")==null) {
+        bt.disabled = true;
+    }
+    else {
+        console.log('ALLO CA MARCHE')
+        bt.disabled = false;
+    }
+}
+
+
+
 rechargementArticleNumbers();
 displayCart();
+PanierVide()
+
 
 
 //------------------------------------BOUTON RETOUR-------------------------------------------------------------------//
