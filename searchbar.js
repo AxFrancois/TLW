@@ -1,4 +1,3 @@
-
 let produits = [
     {
         index :1,
@@ -91,6 +90,9 @@ let produits = [
 ];
 
 const DestinationsList = document.getElementById('Destinations');
+
+//----------------------------Barre de recherche--------------------------------------//
+
 const searchBar = document.getElementById('searchBar');
 
 searchBar.addEventListener('keyup', (e) => {
@@ -103,8 +105,6 @@ searchBar.addEventListener('keyup', (e) => {
     });
     displayDestinations(filteredDestination);
 });
-
-
 
 const loadDestinations = async () => {
     displayDestinations(produits);
@@ -132,10 +132,7 @@ const displayDestinations = (produits) => {
 
 };
 
-
 loadDestinations();
-
-
 
 
 //----------------------------FILTRE--------------------------------------//
@@ -188,3 +185,4 @@ curseurMax.addEventListener('mousemove', function() {
     });
     displayDestinations(filteredDestination);  
 });
+
