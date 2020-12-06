@@ -152,7 +152,6 @@ function displayCart() {
     }
     else {
         productContainer.innerHTML = `
-        </br>
         <h2>Vous n'avez rien dans votre panier</h2>`
     }
 
