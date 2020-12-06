@@ -302,6 +302,7 @@ nav.Nav2{
     opacity: 0;
     visibility: hidden;
     z-index: 1000;
+    margin: 10px;
   }
   #button::after {
     content: "\f077";
@@ -313,15 +314,15 @@ nav.Nav2{
     color: #fff;
     
 }
-  #button:hover {
+#button:hover {
     cursor: pointer;
     background-color: #333;
   }
-  #button:active {
+#button:active {
     background-color: #555;
   }
 
-  #button.show {
+#button.show {
     opacity: 1;
     visibility: visible;
   }
@@ -333,9 +334,6 @@ h1{
     font-family: sans-serif;
 }
 
-#button {
-    margin: 10px;
-  }
 
 #DestinationList {
     padding-inline-start: 0;

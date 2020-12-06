@@ -127,7 +127,7 @@ function displayCart() {
     let cartCost = localStorage.getItem('coutTotal');
     
     if(cartItems && productContainer) {
-        productContainer.innerHTML = ``;
+        productContainer.innerHTML = ` `;
         Object.values(cartItems).map(item => {
            productContainer.innerHTML += `
            <div class ="produit">
@@ -157,8 +157,8 @@ function displayCart() {
         `;
     }
     else {
-        productContainer.innerHTML = `
-        <h2>Vous n'avez rien dans votre panier</h2>`
+        productContainer.innerHTML += `
+        <h2>Vous n'avez rien dans votre panier</h2>`;
     }
 
 
@@ -166,13 +166,12 @@ function displayCart() {
 
 function PanierVide(){
     var bt = document.getElementById('submit')
-    console.log(localStorage.getItem("panierNumbers")==0)
-    console.log(localStorage.getItem("panierNumbers")==null)
+    // console.log(localStorage.getItem("panierNumbers")==0)
+    // console.log(localStorage.getItem("panierNumbers")==null)
     if (localStorage.getItem("panierNumbers")==0 || localStorage.getItem("panierNumbers")==null) {
         bt.disabled = true;
     }
     else {
-        console.log('ALLO CA MARCHE')
         bt.disabled = false;
     }
 }
@@ -180,25 +179,9 @@ function PanierVide(){
 
 rechargementArticleNumbers();
 displayCart();
-PanierVide()
+PanierVide();
 
 
 
-//------------------------------------BOUTON RETOUR-------------------------------------------------------------------//
-jQuery(document).ready(function() {
-var btn = $('#button');
 
-$(window).scroll(function() {
-  if ($(window).scrollTop() > 200) {
-    btn.addClass('show');
-  } else {
-    btn.removeClass('show');
-  }
-});
-
-btn.on('click', function(e) {
-  e.preventDefault();
-  $('html, body').animate({scrollTop:0}, '300');
-});
-});
 

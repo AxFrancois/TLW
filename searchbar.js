@@ -81,7 +81,7 @@ let produits = [
     {
         index :9,
         name: 'Voyage à New York',
-        tag: 'New_York' ,
+        tag: 'New York' ,
         fuseau : 'New_York',
         continent : 'America',
         prix: 1200,
@@ -121,7 +121,7 @@ const displayDestinations = (produits) => {
                 <div class="InfoDestination">${Emplacement.tag.replace("_"," ")} | <span id="zone_heure${Emplacement.index}"></span> | <span id="zone_meteo${Emplacement.index}"></span> </div>${Emplacement.prix}€
                 </div>
                 <a class="add-panier" id="panier" href="#">Ajouter au panier</a>
-                <a  id = "reserver" href="reservation.html?id=${Emplacement.index}">Réserver</a>
+                <a  id = "reserver" href="reservation.html?id=${Emplacement.index}" onclick = "clearCart()">Réserver</a>
                 </div>
             </li>
         `;
@@ -184,5 +184,32 @@ curseurMax.addEventListener('mousemove', function() {
         }
     });
     displayDestinations(filteredDestination);  
+});
+
+// Fonction de la page reservation qui nettoie le panier lors d'une reservation direct
+function clearCart(){
+    localStorage.removeItem('produitsInPanier');
+    localStorage.setItem('panierNumbers', '0');
+    rechargementArticleNumbers();
+}
+
+//------------------------------------BOUTON RETOUR-------------------------------------------------------------------//
+
+jQuery(document).ready(function() {
+var btn = $('#button');
+
+$(window).scroll(function() {
+  if ($(window).scrollTop() > 1) {
+    btn.addClass('show');
+    
+  } else {
+    btn.removeClass('show');
+  }
+});
+
+btn.on('click', function(e) {
+  e.preventDefault();
+  $('html, body').animate({scrollTop:0}, '300');
+});
 });
 

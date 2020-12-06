@@ -65,15 +65,14 @@ const displayReserveDestinations = (produits) => {
 });
 }
 let sejour_id = new URLSearchParams(window.location.search).get("id")
-console.log(sejour_id)
 
 const produitReserver = produits.filter((Emplacement) => {
       if (Emplacement.index == sejour_id){
         console.log(Emplacement)
         return(
-          
           Emplacement.tag.toLowerCase()
         )};
   });
   displayReserveDestinations(produitReserver)
-  
+
+
