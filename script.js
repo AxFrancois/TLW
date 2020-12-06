@@ -178,7 +178,6 @@ function PanierVide(){
 }
 
 
-
 rechargementArticleNumbers();
 displayCart();
 PanierVide()
