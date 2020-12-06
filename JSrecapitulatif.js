@@ -42,8 +42,6 @@ if (recap('petit_dejeuner') == 'on'){
    petitDejeuner = "Option : Aucune option choisie" ;
 }
 
-console.log(recap('email'))
-
 let listeInfoUser = document.querySelector("#infosUserReservation");
      listeInfoUser.innerHTML += `
     <fieldset class ="recap"><legend class="recapTitle">Récapitulatif</legend>
