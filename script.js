@@ -76,6 +76,12 @@ function del(parNom){
         PrixTotal = PrixTotal + cartItems[item].prix * cartItems[item].inPanier; 
     };
     localStorage.setItem("coutTotal", PrixTotal);
+
+    if (localStorage.getItem("panierNumbers")==0) {
+        var myItem = localStorage.getItem('coupleID');
+        localStorage.clear();
+        localStorage.setItem('coupleID',myItem)
+    }
     location.reload();
 }
 
