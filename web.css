@@ -121,11 +121,12 @@ div a{
     height : 2.2rem
 }
 .remiseAZero{
-    float: right;
-    background-color: #ffffff;
-    color : red ;
-    font-weight: bold;
-    margin-right: 5px;
+    
+    background-color: white;
+    margin-top: 30px;
+    padding: 6px 12px;
+    border-radius: 5px;
+    font: 15px "Calibri" , "Sans serif";
 }
 
 #reservationRedirect{
@@ -140,7 +141,7 @@ div a{
     margin-top: 10px;
     padding : 6px 12px;
     border-radius: 5px;
-    font : 20px  "Sans serif"
+    font : 20px  "Sans serif";
 }
 
 
@@ -270,21 +271,26 @@ nav.Nav2{
     display: flex;
     justify-content: space-between;
     margin: auto;
+    padding-left: 2%;
+    padding-right: 2%;
+    color : #FFF ;
+    border-radius: 10px;
 }
 .tri-before:before{
     content: "\f1de";
     font-family: FontAwesome;
 }
+
 .tri-filter:hover{
     cursor: pointer;
     font-style: bold ;
-    background-color : #D82D25;
-    color : #481AC2
+    background-color : grey;
+    color : black
 }
 
 #button {
     display: inline-block;
-    background-color: #d37f12;
+    background-color:#424558;
     width: 50px;
     height: 50px;
     text-align: center;
@@ -462,7 +468,7 @@ h2#connexiontitle{
 
 
 .Coeur2, #Map{
-    margin: 100px 50px 50px 50px;
+    margin: 100px 50px 10px 50px;
     width: auto;
     height: auto;
 }

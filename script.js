@@ -121,7 +121,7 @@ function displayCart() {
     let cartCost = localStorage.getItem('coutTotal');
     
     if(cartItems && productContainer) {
-        productContainer.innerHTML = "";
+        productContainer.innerHTML = ``;
         Object.values(cartItems).map(item => {
            productContainer.innerHTML += `
            <div class ="produit">
@@ -149,6 +149,11 @@ function displayCart() {
          <h4 class="panierTotal">${cartCost},00€</h4>
         </div>
         `;
+    }
+    else {
+        productContainer.innerHTML = `
+        </br>
+        <h2>Vous n'avez rien dans votre panier</h2>`
     }
 
 

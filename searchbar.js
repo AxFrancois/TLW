@@ -74,7 +74,7 @@ let produits = [
         tag: 'Japon' ,
         fuseau : 'Tokyo',
         continent : 'Asia',
-        prix: 200,
+        prix: 1300,
         inPanier:0
     },
 
@@ -84,7 +84,7 @@ let produits = [
         tag: 'New_York' ,
         fuseau : 'New_York',
         continent : 'America',
-        prix: 1020,
+        prix: 1200,
         inPanier: 0
     }
 ];

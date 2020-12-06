@@ -91,6 +91,7 @@
 .titre-produits{
     width: 55%;
     text-align: center;
+    flex-shrink: 0;
 }
 
 div.prix{
