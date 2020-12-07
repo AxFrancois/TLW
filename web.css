@@ -216,7 +216,6 @@ div a{
   }
 
 .Intro{
-    background: radial-gradient(ellipse farthest-corner,  white 50%, rgba(0,0,0,0),);
     padding : 30px;
     text-align: center;
 }
@@ -250,7 +249,6 @@ h2{
 .Coeur{
     text-align: center;
     margin : 0px ;
-    background-color: white;
 }
 
 .contactinfos{

@@ -81,7 +81,7 @@ let produits = [
     {
         index :9,
         name: 'Voyage à New York',
-        tag: 'New York' ,
+        tag: 'New_York' ,
         fuseau : 'New_York',
         continent : 'America',
         prix: 1200,
