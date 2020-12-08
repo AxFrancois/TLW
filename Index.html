@@ -90,6 +90,14 @@
             <p class = "PrixMax">max : <span id = "valuePrixMax"></span> </p>
             <input id="rangeMax" class = "prixRangeMax" type = 'range'min ="0" max = "2000">
         </div>
+        <div class="selectPrix">
+            <label for="priceSelect">Chosissez un orde de tri </label>
+            <select name="tri-pri" id="priceSelect" onchange="sortPrice()">
+                <option value="">-ordre de tri-</option>
+                <option value="croissant">Croissant</option>
+                <option value="decroissant">Décroissant</option>
+            </select>
+        </div>  
         </div>
         
         <div class="Contenu">

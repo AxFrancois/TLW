@@ -186,6 +186,19 @@ curseurMax.addEventListener('mousemove', function() {
     displayDestinations(filteredDestination);  
 });
 
+function sortPrice(){
+    if (document.getElementById('priceSelect').value == "croissant"){
+        produits.sort(function(a, b){
+        return a.prix - b.prix;
+        });
+        displayDestinations(produits)
+}   else if (document.getElementById('priceSelect').value == "decroissant"){
+    produits.sort(function(a, b){
+        return b.prix - a.prix;
+});
+displayDestinations(produits)
+}
+}
 // Fonction de la page reservation qui nettoie le panier lors d'une reservation direct
 function clearCart(){
     localStorage.removeItem('produitsInPanier');
