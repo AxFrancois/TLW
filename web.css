@@ -77,7 +77,10 @@ li a{
     background-color: rgba(241,211,79,0.15);
 }
 
-
+.Carte:hover{
+    border-top : 5px solid #2ff3e2;
+    background-color : rgba(34, 172, 160, 0.15) ;
+}
 
 #Destinations .Emplacement{
     float : left ;
@@ -216,9 +219,9 @@ div a{
   }
 
 .Intro{
-    background: radial-gradient(ellipse farthest-corner,  white 50%, rgba(0,0,0,0),);
     padding : 30px;
     text-align: center;
+    font-size: x-large;
 }
 
 /*-----------------------------------------------------PAGE CONTACT-----------------------------------------------------------*/
@@ -250,7 +253,6 @@ h2{
 .Coeur{
     text-align: center;
     margin : 0px ;
-    background-color: white;
 }
 
 .contactinfos{
@@ -470,4 +472,6 @@ h2#connexiontitle{
     height: auto;
 }
 
-
+p{
+    padding: 0% 5% 0% 5%;
+}
