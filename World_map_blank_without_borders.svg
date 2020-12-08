@@ -29,11 +29,7 @@
   <g>
 
   <!-- Paris -->
-<<<<<<< HEAD
-  <a href="reservation.html?id=1"  target="_blank">
-=======
   <a class="ancre" href="reservation.html?id=1"  target="_blank" title="This is some text I want to display." >
->>>>>>> 7429dfbd7cd4453eb9ab9874a6ddc5c45483d328
   <circle cx="2080" cy="510" r="20" stroke="orange" stroke-width="3" fill="red" />
   <text x="2100" y="520" font-family="'Lucida Sans" font-size="35" fill="black" >Paris</text>
   </a>
