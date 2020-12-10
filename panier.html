@@ -1,95 +1,99 @@
-
 <!DOCTYPE html>
-<html>
+<html lang="fr"> 
     <head> 
         <meta charset="utf-8"/>
+        <!--Page panier-->
         <meta name = "viewport" content ="width-device-width, initiale-scale">
-            <link href="test-css-panier.css" rel="stylesheet">
-            <link rel="stylesheet" type="text/css" href="web.css ">
-            <link rel="stylesheet" href ="test-css-panier.css">
-            <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-            <link rel="icon" type="image/png" sizes="96x96" href="Photos/favicon-96x96.png">
-            <title>Panier | Agence Risque-Tout</title>
+        <link href="test-css-panier.css" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="web.css ">
+        <link rel="stylesheet" href ="test-css-panier.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="icon" type="image/png" sizes="96x96" href="Photos/favicon-96x96.png">
+        <title>Panier | Agence Risque-Tout</title>
     </head>
+
     <body>
-        
-        <header>
-            <div class="Header">
-                <h1>Agence Risque-tout</h1>
-                <nav>
-                    <ul>
-                        <li class="Home"><a href="Index.html">Page d'accueil <ion-icon name="home-outline"></ion-icon></a></li>
-                        <li class="Carte"><a href="WorldMap.html">Carte du monde <i class="fa fa-map" aria-hidden="true"></i></a></li>
-                        <li class="Panier"><a href="panier.html">Panier <i class="fa fa-shopping-basket" aria-hidden="true"></i><span> 0</span></a></li>
-                        <li class= "Client"><a href="#" type="button" aria-haspopup="dialog" aria-controls="dialog">Espace Client <i class="fa fa-user-circle" aria-hidden="true"></i></a>
-                            <div class="js-page">
-                          <main class="pageEspaceClient">
-                           
-                          </main>
-                          <div id="dialog" role="dialog" aria-labelledby="dialog-title" aria-describedby="dialog-desc" aria-modal="true" aria-hidden="true" tabindex="-1" class="c-dialog">
+		<header class="Header">
+        <h1>Agence Risque-tout</h1>
+        <nav>
+            <ul> <!--Barre de Menu-->
+                <li class="Home"><a href="Index.html">Page d'accueil <ion-icon name="home-outline"></ion-icon></a></li>
+                <li class="Carte"><a href="WorldMap.html">Carte du monde <i class="fa fa-map" aria-hidden="true"></i></a></li>
+                <li class="Panier"><a href="panier.html">Panier <i class="fa fa-shopping-basket" aria-hidden="true"></i><span> 0</span></a></li>
+                <li class= "Client"><a href="#" aria-haspopup="dialog" aria-controls="dialog">Espace Client <i class="fa fa-user-circle" aria-hidden="true"></i></a>
+                    <div class="js-page"> <!--Champs pour la connexion/inscription-->
+                        <div class="pageEspaceClient">
+                        </div>
+                        <div id="dialog" role="dialog" aria-labelledby="dialog-title" aria-describedby="dialog-desc" aria-modal="true" aria-hidden="true" tabindex="-1" class="c-dialog">
                             <div role="document" class="c-dialog__box">
-                              <button type="button" class="close" title="closeWindow" data-dismiss="dialog">X</button>
-                              <h2 id="dialog-title">Espace Client</h2>
-                              <p id="dialog-desc">Identifiez-vous pour accéder à votre compte</p>
-                             <div id ="client-space" >
-                              <div id ="contenuform">
-                                <h2 onclick="connexionForm()" id="connexiontitle">Se connecter</h2>
-                                <form  id = "connexion" method="POST" action="" autocomplete="on">
-                                    <span class = "input_icon"><i class ="fa fa-user" aria-hidden="true"></i></span>
-                                    <label for = "identifiantUser">Nom d'utilisateur</label></br>
-                                    <input type="text" name = "identifiantUser" id = "identifiant" placeholder="Identifiant"/></br>
-                                  <br>
-                                    <span class = "input_icon"><i class ="fa fa-lock" aria-hidden="true"></i></span>
-                                    <label for = "password">Mot de passe</label></br>
-                                    <input type="password" name = "password" id = "pass" placeholder="Password"/></br>
-                                    <br>
-                                    <input type = "checkbox" name ="Rememeber" id ="Rememeber"/>
-                                    <label for = "Rememeber">Se souvenir de moi</label>
-                                    <br>
-                                    <input type="submit" class = "send " value = "Valider"><br>  
-                                  </form>
-                                  <h2 onclick="inscriptionForm()" id="inscriptiontitle">Créer un compte</h2>
-                                  <form id="inscription" style="display: none;">
-                                    <label for="identifiantUser">Nom d'utilisateur</label><br>
-                                    <input type="text" name="identifiantUser" id="idInscription" /><br>
-                                    <br>
-                                    <label for="password">Mot de passe : </label><br>
-                                    <input class="MdpInscription" id="newPass" type="password" placeholder="Mot de passe"/><br>
-                                    <br>
-                                    <label for="confirmNewPass">Confirmation : </label><br>
-                                    <input class="MdpInscription" id="confirmNewPass" type="password" placeholder="Confirmez votre mot de passe"/><br>
-                                    <br>
-                                    <button class ="send" id="signup">Enregistrer</button>
-                               
-                                  </form>
-                                  <span id ="messageSuccess"></span>
-                        <li class="Contact"><a href="Contact.html">À Propos & Contact <i class="fa fa-at" aria-hidden="true"></i></a></li>
-                    </ul>
-                </nav>
+                                <button type="button" class="close" title="closeWindow" data-dismiss="dialog">X</button>
+                                <h2 id="dialog-title">Espace Client</h2>
+                                <p id="dialog-desc">Identifiez-vous pour accéder à votre compte</p>
+                                <div id ="client-space" >
+                                    <div id ="contenuform">
+                                        <h2 onclick="connexionForm()" id="connexiontitle">Se connecter</h2>
+                                        <form  id = "connexion" method="POST" autocomplete="on">
+                                            <span class = "input_icon"><i class ="fa fa-user" aria-hidden="true"></i></span>
+                                            <label for = "identifiant">Nom d'utilisateur</label><br>
+                                            <input type="text" name = "identifiantUser" id = "identifiant" placeholder="Identifiant"/><br>
+                                            <br>
+                                            <span class = "input_icon"><i class ="fa fa-lock" aria-hidden="true"></i></span>
+                                            <label for = "pass">Mot de passe</label><br>
+                                            <input type="password" name = "password" id = "pass" placeholder="Password"/><br>
+                                            <br>
+                                            <input type = "checkbox" name ="Rememeber" id ="Rememeber"/>
+                                            <label for = "Rememeber">Se souvenir de moi</label>
+                                            <br>
+                                            <input type="submit" class = "send " value = "Valider"><br>  
+                                        </form>
+                                        <h2 onclick="inscriptionForm()" id="inscriptiontitle">Créer un compte</h2>
+                                        <form id="inscription" style="display: none;">
+                                            <label for="idInscription">Nom d'utilisateur</label><br>
+                                            <input type="text" name="identifiantUser" id="idInscription" /><br>
+                                            <br>
+                                            <label for="newPass">Mot de passe : </label><br>
+                                            <input class="MdpInscription" id="newPass" type="password" placeholder="Mot de passe"/><br>
+                                            <br>
+                                            <label for="confirmNewPass">Confirmation : </label><br>
+                                            <input class="MdpInscription" id="confirmNewPass" type="password" placeholder="Confirmez votre mot de passe"/><br>
+                                            <br>
+                                            <button class ="send" id="signup">Enregistrer</button>
+                                        </form>
+                                    <span id ="messageSuccess"></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                <li class="Contact"><a href="Contact.html">À Propos & Contact <i class="fa fa-at" aria-hidden="true"></i></a></li>
+            </ul>
+        </nav>
+		</header>      
+
+		<main>
+        <div class="produits-container">
+            <div class="produits-header">
+                <h5 class="titre-produits">Produits</h5>
+                <h5 class="prix">PRIX</h5>
+                <h5 class="quantite">quantité</h5>
+                <h5 class="total">Total</h5>
             </div>
-            </header>
+          <div class="produits"></div>
+      </div>
+      
+      <form action="reservation.html" id="reservationRedirect">
+          <input class="reserved" type="submit" value="Réserver" id="submit">
+      </form>
+    </main>
 
-<div class="produits-container">
-    <div class="produits-header">
-        <h5 class="titre-produits">Produits</h5>
-        <h5 class="prix">PRIX</h5>
-        <h5 class="quantite">quantité</h5>
-        <h5 class="total">Total</h5>
-        </div>
-        <div class="produits"></div>
-</div>
-<a id="button"></a>
+    <a id="button"></a>
+    <footer class="PiedPage">
+        <div class="MenuPiedPage">2020 Agence Risque-Tout</div>
+        <div class="MenuPiedPage"><a href="Contact.html">À Propos & Contact</a></div>
+    </footer>
 
-</div>
-<form action="reservation.html" id="reservationRedirect">
-<input class="reserved" type="submit" value="Réserver" id="submit"></input>
-</form>
 
-<footer class="PiedPage">
-    <div class="MenuPiedPage">2020 Agence Risque-Tout</div>
-    <div class="MenuPiedPage"><a href="Contact.html">À Propos & Contact</a></div>
-</footer>
-<script src="http://code.jquery.com/jquery-1.11.2.min.js" type="text/javascript"></script>
+<script src="http://code.jquery.com/jquery-1.11.2.min.js"></script>
 <script src = "boutonretour.js"></script>
 <script type="module" src="https://unpkg.com/ionicons@5.1.2/dist/ionicons/ionicons.esm.js"></script>
 <script src = "script.js"></script>
