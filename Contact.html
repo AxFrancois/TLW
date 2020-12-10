@@ -1,144 +1,143 @@
 <!DOCTYPE html>
 <html lang="fr"> 
-<head>
-    <!--Page contact et info-->
-    <meta charset="UTF-8">
-    <link rel="stylesheet" type="text/css" href="web.css ">
-    <link rel="stylesheet" href ="test-css-panier.css">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="icon" type="image/png" sizes="96x96" href="Photos/favicon-96x96.png">
-    <title>Contact | Agence Risque-Tout</title>
-</head>
+    <head>
+        <!--Page contact et info-->
+        <meta charset="UTF-8">
+        <link rel="stylesheet" type="text/css" href="web.css ">
+        <link rel="stylesheet" href ="test-css-panier.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="icon" type="image/png" sizes="96x96" href="Photos/favicon-96x96.png">
+        <title>Contact | Agence Risque-Tout</title>
+    </head>
 
-<body>
-    <header class="Header">
-        <h1>Agence Risque-tout</h1>
-        <nav>
-            <ul> <!--Barre de Menu-->
-                <li class="Home"><a href="Index.html">Page d'accueil <ion-icon name="home-outline"></ion-icon></a></li>
-                <li class="Carte"><a href="WorldMap.html">Carte du monde <i class="fa fa-map" aria-hidden="true"></i></a></li>
-                <li class="Panier"><a href="panier.html">Panier <i class="fa fa-shopping-basket" aria-hidden="true"></i><span> 0</span></a></li>
-                <li class= "Client"><a href="#" aria-haspopup="dialog" aria-controls="dialog">Espace Client <i class="fa fa-user-circle" aria-hidden="true"></i></a>
-                    <div class="js-page"> <!--Champs pour la connexion/inscription-->
-                        <div class="pageEspaceClient">
-                        </div>
-                        <div id="dialog" role="dialog" aria-labelledby="dialog-title" aria-describedby="dialog-desc" aria-modal="true" aria-hidden="true" tabindex="-1" class="c-dialog">
-                            <div role="document" class="c-dialog__box">
-                                <button type="button" class="close" title="closeWindow" data-dismiss="dialog">X</button>
-                                <h2 id="dialog-title">Espace Client</h2>
-                                <p id="dialog-desc">Identifiez-vous pour accéder à votre compte</p>
-                                <div id ="client-space" >
-                                    <div id ="contenuform">
-                                        <h2 onclick="connexionForm()" id="connexiontitle">Se connecter</h2>
-                                        <form  id = "connexion" method="POST" autocomplete="on">
-                                            <span class = "input_icon"><i class ="fa fa-user" aria-hidden="true"></i></span>
-                                            <label for = "identifiant">Nom d'utilisateur</label><br>
-                                            <input type="text" name = "identifiantUser" id = "identifiant" placeholder="Identifiant"/><br>
-                                            <br>
-                                            <span class = "input_icon"><i class ="fa fa-lock" aria-hidden="true"></i></span>
-                                            <label for = "pass">Mot de passe</label><br>
-                                            <input type="password" name = "password" id = "pass" placeholder="Password"/><br>
-                                            <br>
-                                            <input type = "checkbox" name ="Rememeber" id ="Rememeber"/>
-                                            <label for = "Rememeber">Se souvenir de moi</label>
-                                            <br>
-                                            <input type="submit" class = "send " value = "Valider"><br>  
-                                        </form>
-                                        <h2 onclick="inscriptionForm()" id="inscriptiontitle">Créer un compte</h2>
-                                        <form id="inscription" style="display: none;">
-                                            <label for="idInscription">Nom d'utilisateur</label><br>
-                                            <input type="text" name="identifiantUser" id="idInscription" /><br>
-                                            <br>
-                                            <label for="newPass">Mot de passe : </label><br>
-                                            <input class="MdpInscription" id="newPass" type="password" placeholder="Mot de passe"/><br>
-                                            <br>
-                                            <label for="confirmNewPass">Confirmation : </label><br>
-                                            <input class="MdpInscription" id="confirmNewPass" type="password" placeholder="Confirmez votre mot de passe"/><br>
-                                            <br>
-                                            <button class ="send" id="signup">Enregistrer</button>
-                                        </form>
-                                    <span id ="messageSuccess"></span>
+    <body>
+        <header class="Header">
+            <h1>Agence Risque-tout</h1>
+            <nav>
+                <ul> <!--Barre de Menu-->
+                    <li class="Home"><a href="Index.html">Page d'accueil <ion-icon name="home-outline"></ion-icon></a></li>
+                    <li class="Carte"><a href="WorldMap.html">Carte du monde <i class="fa fa-map" aria-hidden="true"></i></a></li>
+                    <li class="Panier"><a href="panier.html">Panier <i class="fa fa-shopping-basket" aria-hidden="true"></i><span> 0</span></a></li>
+                    <li class= "Client"><a href="#" aria-haspopup="dialog" aria-controls="dialog">Espace Client <i class="fa fa-user-circle" aria-hidden="true"></i></a>
+                        <div class="js-page"> <!--Champs pour la connexion/inscription-->
+                            <div class="pageEspaceClient">
+                            </div>
+                            <div id="dialog" role="dialog" aria-labelledby="dialog-title" aria-describedby="dialog-desc" aria-modal="true" aria-hidden="true" tabindex="-1" class="c-dialog">
+                                <div role="document" class="c-dialog__box">
+                                    <button type="button" class="close" title="closeWindow" data-dismiss="dialog">X</button>
+                                    <h2 id="dialog-title">Espace Client</h2>
+                                    <p id="dialog-desc">Identifiez-vous pour accéder à votre compte</p>
+                                    <div id ="client-space" >
+                                        <div id ="contenuform">
+                                            <h2 onclick="connexionForm()" id="connexiontitle">Se connecter</h2>
+                                            <form  id = "connexion" method="POST" autocomplete="on">
+                                                <span class = "input_icon"><i class ="fa fa-user" aria-hidden="true"></i></span>
+                                                <label for = "identifiant">Nom d'utilisateur</label><br>
+                                                <input type="text" name = "identifiantUser" id = "identifiant" placeholder="Identifiant"/><br>
+                                                <br>
+                                                <span class = "input_icon"><i class ="fa fa-lock" aria-hidden="true"></i></span>
+                                                <label for = "pass">Mot de passe</label><br>
+                                                <input type="password" name = "password" id = "pass" placeholder="Password"/><br>
+                                                <br>
+                                                <input type = "checkbox" name ="Rememeber" id ="Rememeber"/>
+                                                <label for = "Rememeber">Se souvenir de moi</label>
+                                                <br>
+                                                <input type="submit" class = "send " value = "Valider"><br>  
+                                            </form>
+                                            <h2 onclick="inscriptionForm()" id="inscriptiontitle">Créer un compte</h2>
+                                            <form id="inscription" style="display: none;">
+                                                <label for="idInscription">Nom d'utilisateur</label><br>
+                                                <input type="text" name="identifiantUser" id="idInscription" /><br>
+                                                <br>
+                                                <label for="newPass">Mot de passe : </label><br>
+                                                <input class="MdpInscription" id="newPass" type="password" placeholder="Mot de passe"/><br>
+                                                <br>
+                                                <label for="confirmNewPass">Confirmation : </label><br>
+                                                <input class="MdpInscription" id="confirmNewPass" type="password" placeholder="Confirmez votre mot de passe"/><br>
+                                                <br>
+                                                <button class ="send" id="signup">Enregistrer</button>
+                                            </form>
+                                        <span id ="messageSuccess"></span>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                <li class="Contact"><a href="Contact.html">À Propos & Contact <i class="fa fa-at" aria-hidden="true"></i></a></li>
-            </ul>
-        </nav>
-    </header>
+                    <li class="Contact"><a href="Contact.html">À Propos & Contact <i class="fa fa-at" aria-hidden="true"></i></a></li>
+                </ul>
+            </nav>
+        </header>
 
-    <main class="Coeur">
-        <div class="contactinfos">
-            <h2>
-                À Propos
-            </h2>
-            <p>
-                L'Agence Risque-Tout a été fondéé en 2020 lors d'un TP d'informatique sur le HTML. Ayant senti le potentiel de ce business, les fondateurs ont décidé de concrétiser ce projet en ouvrant un vrai site de réseervation de voyage.
-                Fonder une agence de voyage en pleine crise sanitaire mondiale était un pari osé, mais qui s'est avéré payant grâce à la diminution de fréquentation des sites concurents.
-                Nous avons d'ailleurs eu d'excellents retour de nos clients : "10/10, would do it again".
-            </p>
-        </div>
-        <div class="nous_contacter">
-            <h2>
-                Nous Contacter
-            </h2>
-            <h3>
-                Une question ? Un problème ? Vous pouvez nous demander des informations via ce formulaire de contact :
-            </h3>
-            <fieldset class="nous_contacter_formulaire"><legend>Vos informations</legend>
-                <form  action="FormulaireContact" method="post">
-                    <div class ="infosContact">
-                        <label for="Nom">Nom :</label>
-                        <input type="text" id="Nom" name="ContactName">
-						<br>
-                        <label for="mail">e-mail :</label>
-                        <input type="email" id="mail" name="ContactMail">
-						<br>
-                        <label for="texte">Message :</label>
-                        <textarea id="texte" name="ContactMessage"></textarea>
-                    </div>
-                    <div class="Boutton">
-                        <button class = "send" type="submit">Envoyer le message</button>
-                    </div>
-                </form>
-            </fieldset>
-            <br>
-            <h3>
-                Vous pouvez également nous contacter via les moyens suivants : 
-            </h3>
-            <div>
-                <address>
-                    Par e-mail <i class="fa fa-at" aria-hidden="true"></i> : 
-                    <a href=" mailto:contact@agencerisquetout.fr?subject=Demande%20de%20renseignements&body=Bonjour%2C%20je%20souhaiterais%20obtenir%20des%20renseignements%20sur " target="_top"> Nous envoyer un email</a>
-                    <br>
-                    Par téléphone <i class="fa fa-phone" aria-hidden="true"></i>: 
-                    <a href="tel:+33404040404">+33404040404</a>
-                    <br>
-                    Par courrier postal <i class="fa fa-envelope" aria-hidden="true"></i>: 
-                    <br>
-                    221B Rue du Boulanger
-                    <br>
-                    69000 Lyon
-                </address>
+        <main class="Coeur">
+            <div class="contactinfos">
+                <h2>
+                    À Propos
+                </h2>
+                <p>
+                    L'Agence Risque-Tout a été fondéé en 2020 lors d'un TP d'informatique sur le HTML. Ayant senti le potentiel de ce business, les fondateurs ont décidé de concrétiser ce projet en ouvrant un vrai site de réseervation de voyage.
+                    Fonder une agence de voyage en pleine crise sanitaire mondiale était un pari osé, mais qui s'est avéré payant grâce à la diminution de fréquentation des sites concurents.
+                    Nous avons d'ailleurs eu d'excellents retour de nos clients : "10/10, would do it again".
+                </p>
             </div>
-        </div>
-    </main>
-	
-    <a id="button"></a> <!--Bouton retour-->
-	
-    <footer class="PiedPage">
-        <div class="MenuPiedPage">2020 Agence Risque-Tout</div>
-        <div class="MenuPiedPage"><a href="Contact.html">À Propos & Contact</a></div>
-    </footer>
+            <div class="nous_contacter">
+                <h2>
+                    Nous Contacter
+                </h2>
+                <h3>
+                    Une question ? Un problème ? Vous pouvez nous demander des informations via ce formulaire de contact :
+                </h3>
+                <fieldset class="nous_contacter_formulaire"><legend>Vos informations</legend>
+                    <form  action="FormulaireContact" method="post">
+                        <div class ="infosContact">
+                            <label for="Nom">Nom :</label>
+                            <input type="text" id="Nom" name="ContactName">
+                            <br>
+                            <label for="mail">e-mail :</label>
+                            <input type="email" id="mail" name="ContactMail">
+                            <br>
+                            <label for="texte">Message :</label>
+                            <textarea id="texte" name="ContactMessage"></textarea>
+                        </div>
+                        <div class="Boutton">
+                            <button class = "send" type="submit">Envoyer le message</button>
+                        </div>
+                    </form>
+                </fieldset>
+                <br>
+                <h3>
+                    Vous pouvez également nous contacter via les moyens suivants : 
+                </h3>
+                <div>
+                    <address>
+                        Par e-mail <i class="fa fa-at" aria-hidden="true"></i> : 
+                        <a href=" mailto:contact@agencerisquetout.fr?subject=Demande%20de%20renseignements&body=Bonjour%2C%20je%20souhaiterais%20obtenir%20des%20renseignements%20sur " target="_top"> Nous envoyer un email</a>
+                        <br>
+                        Par téléphone <i class="fa fa-phone" aria-hidden="true"></i>: 
+                        <a href="tel:+33404040404">+33404040404</a>
+                        <br>
+                        Par courrier postal <i class="fa fa-envelope" aria-hidden="true"></i>: 
+                        <br>
+                        221B Rue du Boulanger
+                        <br>
+                        69000 Lyon
+                    </address>
+                </div>
+            </div>
+        </main>
+        
+        <a id="button"></a> <!--Bouton retour-->
+        
+        <footer class="PiedPage">
+            <div class="MenuPiedPage">2020 Agence Risque-Tout</div>
+            <div class="MenuPiedPage"><a href="Contact.html">À Propos & Contact</a></div>
+        </footer>
 
-    <script src="http://code.jquery.com/jquery-1.7.2.min.js"></script>
-    <script src = "boutonretour.js"></script>
-    <script src = "script.js"></script>
-    <script src="pageEspaceClient.js"></script>
-    <script src="connection.js"></script>
+        <script src="http://code.jquery.com/jquery-1.7.2.min.js"></script>
+        <script src = "boutonretour.js"></script>
+        <script src = "script.js"></script>
+        <script src="pageEspaceClient.js"></script>
+        <script src="connection.js"></script>
 
-</body>
-
+    </body>
 </html>
