@@ -1,94 +1,26 @@
-let produits = [
-    {
-        index :1,
-        name: 'Voyage à Paris',
-        tag: 'Paris' ,
-        fuseau : 'Paris',
-        continent : 'Europe',
-        prix: 150,
-        inPanier:0
-    },
 
-    {
-        index :2,
-        name: 'Voyage à Istanbul',
-        tag: 'Istanbul' ,
-        fuseau :'Istanbul',
-        continent : 'Asia',
-        prix: 600,
-        inPanier:0
-    },
-
-    {
-        index :3,
-        name: 'Voyage à Carcassonne',
-        tag: 'Carcassonne' ,
-        fuseau : 'Paris',
-        continent : 'Europe',
-        prix: 350,
-        inPanier: 0
-    },
-    {
-        index :4,
-        name: 'Voyage en Allemagne',
-        tag: 'Allemagne' ,
-        fuseau : 'Berlin',
-        continent : 'Europe',
-        prix: 400,
-        inPanier:0
-    },
-
-    {
-        index :5,
-        name: 'Voyage en Australie',
-        tag: 'Australie' ,
-        fuseau : 'Sydney',
-        continent : 'Australia',
-        prix: 1300,
-        inPanier:0
-    },
-
-    {
-        index :6,
-        name: 'Voyage à Barcelone',
-        tag: 'Barcelone' ,
-        fuseau : 'Madrid',
-        continent : 'Europe',
-        prix: 500,
-        inPanier: 0
-    },
-
-    {
-        index :7,
-        name: 'Voyage en Crète',
-        tag: 'Crète' ,
-        fuseau : 'Athens',
-        continent : 'Europe',
-        prix: 800,
-        inPanier:0
-    },
-
-    {
-        index :8,
-        name: 'Voyage au Japon',
-        tag: 'Japon' ,
-        fuseau : 'Tokyo',
-        continent : 'Asia',
-        prix: 1300,
-        inPanier:0
-    },
-
-    {
-        index :9,
-        name: 'Voyage à New York',
-        tag: 'New_York' ,
-        fuseau : 'New_York',
-        continent : 'America',
-        prix: 1200,
-        inPanier: 0
+class myDestinations{
+    constructor(index, name,tag,fuseau,continent,prix,inPanier){
+        this.index = index;
+        this.name = name;
+        this.tag = tag;
+        this.fuseau = fuseau;
+        this.continent = continent;
+        this.prix = prix;
+        this.inPanier = inPanier
     }
-];
+}
 
+let product1 = new myDestinations(1,'Voyage à Paris','Paris' ,'Paris','Europe',150,0)
+let product2 = new myDestinations(2,'Voyage à Istanbul','Istanbul','Istanbul','Asia',600,0)
+let product3 = new myDestinations(3,'Voyage à Carcassonne','Carcassonne','Carcasonne','Europe',350,0)
+let product4 = new myDestinations(4,'Voyage à Allemagne','Allemagne','Berlin','Europe',400,0)
+let product5 = new myDestinations(5,'Voyage à Australie','Australie','Sydney','Australia',1300,0)
+let product6 = new myDestinations(6,'Voyage à Barcelone','Barcelone','Madrid','Europe',500,0)
+let product7 = new myDestinations(7,'Voyage à Crète','Crète','Athens','Europe',800,0)
+let product8 = new myDestinations(8,'Voyage à Japon','Japon','Tokyo','Asia',1300,0)
+let product9 = new myDestinations(9,'Voyage à New York','New_York','New_York','America',1200,0)
+let produits = [product1,product2,product3,product4,product5,product6,product7,product8,product9];
 const DestinationsList = document.getElementById('Destinations');
 
 //----------------------------Barre de recherche--------------------------------------//
@@ -193,10 +125,10 @@ function sortPrice(){
         });
         displayDestinations(produits)
 }   else if (document.getElementById('priceSelect').value == "decroissant"){
-    produits.sort(function(a, b){
+        produits.sort(function(a, b){
         return b.prix - a.prix;
-});
-displayDestinations(produits)
+        });
+        displayDestinations(produits)
 }
 }
 // Fonction de la page reservation qui nettoie le panier lors d'une reservation direct
