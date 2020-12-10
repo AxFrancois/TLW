@@ -85,16 +85,5 @@
 
 
   </g>
-<script src = "script.js"></script>
-<script>
-    function clearcart(){
-    localStorage.removeItem('produitsInPanier');
-    localStorage.setItem('panierNumbers', '0');
-    rechargementArticleNumbers();
-}
-    var an = document.getElementsByClassName("ancre"); 
-    for (let i=0; i < an.length; i++) {
-      an[i].setAttribute("onclick", "clearcart()");
-    }
-    </script>
+
 </svg>
