@@ -13,7 +13,7 @@ class myDestinations{
 
 let product1 = new myDestinations(1,'Voyage à Paris','Paris' ,'Paris','Europe',150,0)
 let product2 = new myDestinations(2,'Voyage à Istanbul','Istanbul','Istanbul','Asia',600,0)
-let product3 = new myDestinations(3,'Voyage à Carcassonne','Carcassonne','Carcasonne','Europe',350,0)
+let product3 = new myDestinations(3,'Voyage à Carcassonne','Carcassonne','Paris','Europe',350,0)
 let product4 = new myDestinations(4,'Voyage à Allemagne','Allemagne','Berlin','Europe',400,0)
 let product5 = new myDestinations(5,'Voyage à Australie','Australie','Sydney','Australia',1300,0)
 let product6 = new myDestinations(6,'Voyage à Barcelone','Barcelone','Madrid','Europe',500,0)
@@ -133,6 +133,7 @@ function sortPrice(){
 }
 // Fonction de la page reservation qui nettoie le panier lors d'une reservation direct
 function clearCart(){
+    localStorage.removeItem('coutTotal');
     localStorage.removeItem('produitsInPanier');
     localStorage.setItem('panierNumbers', '0');
     rechargementArticleNumbers();
