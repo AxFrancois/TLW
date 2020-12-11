@@ -47,7 +47,7 @@ const loadDestinations = async () => {  //permet le display initial des destinat
 const displayDestinations = (produits) => { //fonction permettant d'afficher les produits
     const htmlString = produits.map((Emplacement) => {  //Injecte ce code html pour chacune des destinations
         return `
-            <li class="Emplacement">
+            <li class="Emplacement" id="Emplacement${Emplacement.tag}">
                 <div class="ImagesDestinations">            
                 <img src="Photos/${Emplacement.tag}.jpg" alt="${Emplacement.tag}" class="image" style="width:100%">
                 <div class="Overlay">
