@@ -127,7 +127,7 @@ curseurMin.addEventListener('mousemove', function() {   //filtrage à chaque mod
             );}
         }
     });
-    displayDestinations(filteredDestination);
+    displayBarDestinations(filteredDestination);
 });
 curseurMax.addEventListener('mousemove', function() {
     
@@ -138,7 +138,7 @@ curseurMax.addEventListener('mousemove', function() {
                 );}
         }
     });
-    displayDestinations(filteredDestination);  
+    displayBarDestinations(filteredDestination);  
 });
 
 //Recherche par ordre de tri
