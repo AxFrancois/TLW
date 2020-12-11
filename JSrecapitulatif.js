@@ -23,20 +23,6 @@ cartItems = JSON.parse(cartItems);
 let listeInfoVoyage = document.querySelector("#infosVoyageReserver");
 if(cartItems && listeInfoVoyage) {
   Object.values(cartItems).map(item => {
-<<<<<<< HEAD
-     listeInfoVoyage.innerHTML += `
-     
-     <div class ="produitReservation">
-       <img src ="./Photos/${item.tag}.jpg">
-       </div>
-      <div class ="prixVoyage">${item.prix},00€</div>
-      <div class ="nomVoyage">
-      <span>Vous avez réservé ${item.inPanier} ${item.name}</span>
-      </div>
-      `
-  });
-}
-=======
   listeInfoVoyage.innerHTML += `
      
     <div class ="produitReservation">
@@ -50,7 +36,6 @@ if(cartItems && listeInfoVoyage) {
 });
 }
 
->>>>>>> ed2147c311885dbffb07b4cb4f9b72199f5f8d3a
 if (recap('petit_dejeuner') == 'on'){
 
    petitDejeuner = "Option : Petit déjeuner" ;
@@ -65,7 +50,7 @@ let listeInfoUser = document.querySelector("#infosUserReservation");
      <label for ="nom"> Nom : `+recap('nom')+`</label>
      <label for ="prenom">Prenom : `+recap('prenom')+`</label>
      <label for ="email">Email : `+recap('email').replace("%40","@")+`</label>
-     <label for ="telephone">n° Telephone : `+recap('telephone')+`</label>
+     <label for ="telephone">n° Telephone : `+recap('telephone').replace("off","Non Renseigné")+`</label>
      <label for ="depart">Date de départ : `+recap('depart')+`</label>
      <label for ="retour">Date de retour : `+recap('retour')+`</label>
      <label for ="adultes">Nombre d'adultes : `+recap('adultes')+`</label>

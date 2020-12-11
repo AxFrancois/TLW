@@ -47,7 +47,7 @@ nav a{
 
 
 
-li a{
+li a .add-panier .video{
     
     font-size: 15px;
     color : #222538 ;
@@ -154,7 +154,7 @@ div a{
     position: relative;
 
 }
-.ImagesDestinations:hover .reserver{
+.ImagesDestinations:hover .video{
     bottom : 163px;
     opacity: 0.8;
     padding: 10px;

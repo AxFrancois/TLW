@@ -29,15 +29,14 @@
     cursor: pointer;
     text-align: center;
     margin-bottom: 5%;
-    width: ;
 }
-/* 
-.ImagesDestinations:hover #panier{
+
+.ImagesDestinations:hover #video{
     bottom : 163px;
     opacity: 0.8;
     padding : 10px;
     text-decoration : none;
-} */
+}
 .ImagesDestinations:hover #reserver{
     bottom : 163px;
     opacity: 0.8;
