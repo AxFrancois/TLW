@@ -1,3 +1,4 @@
+//----------------------------Ajout d'élements au panier (dans Index.html-----------------------------------//
 let paniers = document.querySelectorAll('.add-panier');
 
 for (let i=0; i < paniers.length; i++) {
@@ -7,7 +8,7 @@ for (let i=0; i < paniers.length; i++) {
     })
 }
 
-function rechargementArticleNumbers() {
+function rechargementArticleNumbers() { //fonction qui permet de recalculer le nombre de produit dans le panier à arrivée sur la page (nécéssaire à cause d'un bug avec le SVG)
     let nombreProduits = localStorage.getItem('panierNumbers');
 
     if(nombreProduits) {
@@ -15,7 +16,7 @@ function rechargementArticleNumbers() {
     }
 }
 
-function panierNumbers(produits) {
+function panierNumbers(produits) {  //fonction qui permet de recalculer le nombre de produit dans le panier à chaque modification
     let nombreProduits = localStorage.getItem('panierNumbers');
     nombreProduits = parseInt(nombreProduits)
     
@@ -30,11 +31,10 @@ function panierNumbers(produits) {
     setItems(produits);
 }
 
-function setItems(produits) {
+function setItems(produits) {   //fonction qui permet d'enregistrer le panier dans le local storage
     let cartItems = localStorage.getItem('produitsInPanier');
     cartItems = JSON.parse(cartItems);
     
-  
     if(cartItems !== null) {
         if(cartItems[produits.tag] == undefined) {
             cartItems ={
@@ -52,7 +52,9 @@ function setItems(produits) {
     
     localStorage.setItem("produitsInPanier", JSON.stringify(cartItems));
 }
-function coutTotal(produits) {
+
+function coutTotal(produits) {  //fonction calcule le cout total des produits sélectionnées
+let cartItems = localStorage.getItem('produitsInPanier');
     
     let cartCost = localStorage.getItem('coutTotal');
     
@@ -65,7 +67,9 @@ function coutTotal(produits) {
     
 }
 
-function del(parNom){
+//---------------------------Fonctions de la page Panier.html-------------------------------------//
+
+function del(parNom){   //fonction qui permet de supprimer un élément du panier d'un clic sur la croix
     let cartItems = localStorage.getItem("produitsInPanier");
     cartItems = JSON.parse(cartItems);
     localStorage.setItem("panierNumbers", localStorage.getItem("panierNumbers") -cartItems[parNom].inPanier)
@@ -85,7 +89,7 @@ function del(parNom){
     location.reload();
 }
 
-function Ajouter(parNom){
+function Ajouter(parNom){   //fonction qui permet d'ajouter un voyage en cliquant sur la flèche ">"
     let cartItems = localStorage.getItem("produitsInPanier");
     cartItems = JSON.parse(cartItems);
     debugger
@@ -101,7 +105,8 @@ function Ajouter(parNom){
 }
 
 
-function Enlever(parNom){
+function Enlever(parNom){   //fonction qui permet de retirer un voyage en cliquant sur la flèche "<"
+
     let cartItems = localStorage.getItem("produitsInPanier");
     cartItems = JSON.parse(cartItems);
     if (cartItems[parNom].inPanier == 1) {
@@ -120,7 +125,7 @@ function Enlever(parNom){
 }
 
 
-function displayCart() {
+function displayCart() {    //fonction qui permet d'afficher les éléments du panier
     let cartItems = localStorage.getItem("produitsInPanier");
     cartItems = JSON.parse(cartItems);
     let productContainer = document.querySelector(".produits");
@@ -131,17 +136,17 @@ function displayCart() {
         Object.values(cartItems).map(item => {
            productContainer.innerHTML += `
            <div class ="produit">
-             <ion-icon id="deleteItem${item.tag}" name="close-circle-outline" onclick="del('${item.tag}')"></ion-icon>
-             <img src ="./Photos/${item.tag}.jpg"
-             <span>${item.name}</span>
-             </div>
-             <div class ="prix">${item.prix},00€</div>
+                <ion-icon id="deleteItem${item.tag}" name="close-circle-outline" onclick="del('${item.tag}')"></ion-icon>
+                <img src ="./Photos/${item.tag}.jpg">
+                <span class="produitTexte">${item.name}</span>
+            </div>
+            <div class ="prix">${item.prix},00€</div>
             <div class ="quantite">
-            <ion-icon class = "diminuer" 
-            name="chevron-back-circle-outline" onclick="Enlever('${item.tag}')"></ion-icon>
-            <span>${item.inPanier}</span>
-            <ion-icon class = "augmenter" 
-            name="chevron-forward-circle-outline" onclick="Ajouter('${item.tag}')"></ion-icon>
+                <ion-icon class = "diminuer" 
+                name="chevron-back-circle-outline" onclick="Enlever('${item.tag}')"></ion-icon>
+                <span>${item.inPanier}</span>
+                <ion-icon class = "augmenter" 
+                name="chevron-forward-circle-outline" onclick="Ajouter('${item.tag}')"></ion-icon>
             </div>
             <div class ="total">
                ${item.inPanier*item.prix},00€
@@ -164,10 +169,8 @@ function displayCart() {
 
 }
 
-function PanierVide(){
+function PanierVide(){  //fonction qui permet de bloquer le bouton resserver s'il n'y a rien dans le panier
     var bt = document.getElementById('submit')
-    // console.log(localStorage.getItem("panierNumbers")==0)
-    // console.log(localStorage.getItem("panierNumbers")==null)
     if (localStorage.getItem("panierNumbers")==0 || localStorage.getItem("panierNumbers")==null) {
         bt.disabled = true;
     }
