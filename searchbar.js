@@ -20,7 +20,7 @@ let product6 = new myDestinations(6,'Voyage à Barcelone','Barcelone','Madrid','
 let product7 = new myDestinations(7,'Voyage à Crète','Crète','Athens','Europe',800,0)
 let product8 = new myDestinations(8,'Voyage à Japon','Japon','Tokyo','Asia',1300,0)
 let product9 = new myDestinations(9,'Voyage à New York','New_York','New_York','America',1200,0)
-let produits = [product1,product2,product3,product4,product5,product6,product7,product8,product9];
+const produits = [product1,product2,product3,product4,product5,product6,product7,product8,product9];
 const DestinationsList = document.getElementById('Destinations');
 
 //----------------------------Barre de recherche--------------------------------------//
@@ -35,9 +35,31 @@ searchBar.addEventListener('keyup', (e) => {
             Emplacement.tag.toLowerCase().includes(searchString)    
         );
     });
-    displayDestinations(filteredDestination);
+    displayBarDestinations(filteredDestination);
+    
 });
 
+
+const displayBarDestinations = (mesproduits) => {
+    console.log(produits);
+    console.log(mesproduits);
+    listeIndex = [];
+    for (let k in mesproduits){
+        listeIndex.push(k.index);
+    }
+    console.log(listeIndex);
+    for (let i=0; i < produits.length; i++) {
+    //     for (let k=0; k < mesproduits.length; k++) {
+        if(produits[i].index in listeIndex){
+            document.getElementById(`Emplacement${produits[i].index}`).style.display = 'block'; ;
+            }
+            else{
+                console.log('pas dedans');
+                document.getElementById(`Emplacement${produits[i].index}`).style.display = 'none';
+        }
+};
+ }
+// }
 const loadDestinations = async () => {
     displayDestinations(produits);
     
@@ -46,8 +68,8 @@ const loadDestinations = async () => {
 const displayDestinations = (produits) => {
     const htmlString = produits.map((Emplacement) => {
         return `
-            <li class="Emplacement">
-                <div class="ImagesDestinations">            
+            <li class="Emplacement" id ="Emplacement${Emplacement.index}">
+                <div  class="ImagesDestinations">            
                 <img src="Photos/${Emplacement.tag}.jpg" alt="${Emplacement.tag}" class="image" style="width:100%">
                 <div class="Overlay">
                 <div class="InfoDestination">${Emplacement.tag.replace("_"," ")} | <span id="zone_heure${Emplacement.index}"></span> | <span id="zone_meteo${Emplacement.index}"></span> </div>${Emplacement.prix}€
@@ -59,7 +81,6 @@ const displayDestinations = (produits) => {
         `;
         })
         .join('');
-        //console.log(htmlString)
         DestinationsList.innerHTML = htmlString;
 
 };
