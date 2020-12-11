@@ -1,7 +1,7 @@
 //----------------------------Classe pour les destinations--------------------------------------//
 class myDestinations{
-    constructor(index, name,tag,fuseau,continent,prix,inPanier){
-        this.index = index;
+    constructor(numero, name,tag,fuseau,continent,prix,inPanier){
+        this.numero = numero;
         this.name = name;
         this.tag = tag;
         this.fuseau = fuseau;
@@ -22,7 +22,9 @@ let product6 = new myDestinations(6,'Voyage à Barcelone','Barcelone','Madrid','
 let product7 = new myDestinations(7,'Voyage à Crète','Crète','Athens','Europe',800,0)
 let product8 = new myDestinations(8,'Voyage à Japon','Japon','Tokyo','Asia',1300,0)
 let product9 = new myDestinations(9,'Voyage à New York','New_York','New_York','America',1200,0)
-let produits = [product1,product2,product3,product4,product5,product6,product7,product8,product9];
+
+const produits = [product1,product2,product3,product4,product5,product6,product7,product8,product9];
+
 
 //----------------------------Barre de recherche--------------------------------------//
 const DestinationsList = document.getElementById('Destinations');
@@ -36,10 +38,29 @@ searchBar.addEventListener('keyup', (e) => {    //détecte lorsqu'une lettre en 
             Emplacement.tag.toLowerCase().includes(searchString)    
         );
     });
-    displayDestinations(filteredDestination);   //appelle la fonction displayDestinations pour afficher les destinations filtrées
+    displayBarDestinations(filteredDestination);
+    
 });
 
-const loadDestinations = async () => {  //permet le display initial des destinations
+
+const displayBarDestinations = (mesproduits) => {
+    listenumero = [];
+    for (let k in mesproduits){
+        listenumero.push(mesproduits[k].numero);
+    }
+    for (let i=0; i < produits.length; i++) {
+        if(listenumero.includes(produits[i].numero)){
+            document.getElementById(`Emplacement${produits[i].numero}`).style.display = 'block'; ;
+            }
+            else{
+                console.log('pas dedans');
+                document.getElementById(`Emplacement${produits[i].numero}`).style.display = 'none';
+        }
+};
+ }
+
+const loadDestinations = async () => {
+
     displayDestinations(produits);
     
 };
@@ -47,14 +68,14 @@ const loadDestinations = async () => {  //permet le display initial des destinat
 const displayDestinations = (produits) => { //fonction permettant d'afficher les produits
     const htmlString = produits.map((Emplacement) => {  //Injecte ce code html pour chacune des destinations
         return `
-            <li class="Emplacement" id="Emplacement${Emplacement.tag}">
-                <div class="ImagesDestinations">            
+            <li class="Emplacement" id ="Emplacement${Emplacement.numero}">
+                <div  class="ImagesDestinations">            
                 <img src="Photos/${Emplacement.tag}.jpg" alt="${Emplacement.tag}" class="image" style="width:100%">
                 <div class="Overlay">
-                <div class="InfoDestination">${Emplacement.tag.replace("_"," ")} | <span id="zone_heure${Emplacement.index}"></span> | <span id="zone_meteo${Emplacement.index}"></span> </div>${Emplacement.prix}€
+                <div class="InfoDestination">${Emplacement.tag.replace("_"," ")} | <span id="zone_heure${Emplacement.numero}"></span> | <span id="zone_meteo${Emplacement.numero}"></span> </div>${Emplacement.prix}€
                 </div>
                 <a class="add-panier" id="panier" href="#">Ajouter au panier</a>
-                <a  id = "reserver" href="reservation.html?id=${Emplacement.index}" onclick = "clearCart()">Réserver</a>
+                <a  id = "reserver" href="reservation.html?id=${Emplacement.numero}" onclick = "clearCart()">Réserver</a>
                 </div>
             </li>
         `;
