@@ -24,24 +24,20 @@
 }
 
 #panier{
-    right: 50%;
-    position: absolute;
-    width: 50%;
-    background-color: rgb(255, 253, 253);
-    transition: all 0.3s ease-in-out;
-    opacity: 0;
-    color: rgb(19, 59, 236);
+    position: relative;
+    background-color: rgb(180, 66, 66);
     cursor: pointer;
     text-align: center;
-    
+    margin-bottom: 5%;
+    width: ;
 }
-
+/* 
 .ImagesDestinations:hover #panier{
     bottom : 163px;
     opacity: 0.8;
     padding : 10px;
     text-decoration : none;
-}
+} */
 .ImagesDestinations:hover #reserver{
     bottom : 163px;
     opacity: 0.8;
