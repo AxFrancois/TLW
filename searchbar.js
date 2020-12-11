@@ -79,7 +79,7 @@ const displayDestinations = (produits) => { //fonction permettant d'afficher les
         `
         })
         .join('');
-
+        DestinationsList.innerHTML = htmlString;
         //console.log(htmlString)   //oopsi c'est un debug code ça on dirait, on va dire que c'est un easter egg
 
 
