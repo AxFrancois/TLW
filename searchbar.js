@@ -145,14 +145,14 @@ curseurMax.addEventListener('mousemove', function() {
 function sortPrice(){
     if (document.getElementById('priceSelect').value == "croissant"){
         produitCroissant = produits.sort(function(a, b){
-        return a.prix - b.prix;
+            return a.prix - b.prix;
         });
-        displayBarDestinations(produitCroissant)
+        displayDestinations(produitCroissant)
 }   else if (document.getElementById('priceSelect').value == "decroissant"){
-        produits.sort(function(a, b){
-        return b.prix - a.prix;
+        produitDecroissant =produits.sort(function(a, b){
+            return b.prix - a.prix;
         });
-        displayBarDestinations(produits)
+        displayDestinations(produitDecroissant)
 }
 }
 
