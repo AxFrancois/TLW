@@ -1,3 +1,5 @@
+//----------------------------Script pour afficher l'heure avec l'api worldtime--------------------------------------//
+
 for (let i=0; i <= produits.length-1; i++) {
     
     window.fetch("http://worldtimeapi.org/api/timezone/"+produits[i].continent+"/"+produits[i].fuseau)

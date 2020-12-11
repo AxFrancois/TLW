@@ -183,6 +183,3 @@ function PanierVide(){  //fonction qui permet de bloquer le bouton resserver s'i
 rechargementArticleNumbers();
 displayCart();
 PanierVide();
-
-
-

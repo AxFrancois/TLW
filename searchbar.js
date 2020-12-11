@@ -1,7 +1,7 @@
 //----------------------------Classe pour les destinations--------------------------------------//
 class myDestinations{
-    constructor(index, name,tag,fuseau,continent,prix,inPanier){
-        this.index = index;
+    constructor(numero, name,tag,fuseau,continent,prix,inPanier){
+        this.numero = numero;
         this.name = name;
         this.tag = tag;
         this.fuseau = fuseau;
@@ -24,7 +24,6 @@ let product8 = new myDestinations(8,'Voyage à Japon','Japon','Tokyo','Asia',130
 let product9 = new myDestinations(9,'Voyage à New York','New_York','New_York','America',1200,0)
 
 const produits = [product1,product2,product3,product4,product5,product6,product7,product8,product9];
-const DestinationsList = document.getElementById('Destinations');
 
 //----------------------------Barre de recherche--------------------------------------//
 const DestinationsList = document.getElementById('Destinations');
@@ -38,39 +37,28 @@ searchBar.addEventListener('keyup', (e) => {    //détecte lorsqu'une lettre en 
             Emplacement.tag.toLowerCase().includes(searchString)    
         );
     });
- 
     displayBarDestinations(filteredDestination);
     
 });
 
 
 const displayBarDestinations = (mesproduits) => {
-    console.log(produits);
-    console.log(mesproduits);
-    listeIndex = [];
+    listenumero = [];
     for (let k in mesproduits){
-        listeIndex.push(k.index);
+        listenumero.push(mesproduits[k].numero);
     }
-    console.log(listeIndex);
     for (let i=0; i < produits.length; i++) {
-    //     for (let k=0; k < mesproduits.length; k++) {
-        if(produits[i].index in listeIndex){
-            document.getElementById(`Emplacement${produits[i].index}`).style.display = 'block'; ;
+        if(listenumero.includes(produits[i].numero)){
+            document.getElementById(`Emplacement${produits[i].numero}`).style.display = 'block'; ;
             }
             else{
                 console.log('pas dedans');
-                document.getElementById(`Emplacement${produits[i].index}`).style.display = 'none';
+                document.getElementById(`Emplacement${produits[i].numero}`).style.display = 'none';
         }
 };
  }
-// }
+
 const loadDestinations = async () => {
-    
-    displayDestinations(filteredDestination);   //appelle la fonction displayDestinations pour afficher les destinations filtrées
-};
-
-const loadDestinations = async () => {  //permet le display initial des destinations
-
     displayDestinations(produits);
     
 };
@@ -78,11 +66,11 @@ const loadDestinations = async () => {  //permet le display initial des destinat
 const displayDestinations = (produits) => { //fonction permettant d'afficher les produits
     const htmlString = produits.map((Emplacement) => {  //Injecte ce code html pour chacune des destinations
         return `
-            <li class="Emplacement" id ="Emplacement${Emplacement.index}">
+            <li class="Emplacement" id ="Emplacement${Emplacement.numero}">
                 <div  class="ImagesDestinations">            
                 <img src="Photos/${Emplacement.tag}.jpg" alt="${Emplacement.tag}" class="image" style="width:100%">
                 <div class="Overlay">
-                <div class="InfoDestination">${Emplacement.tag.replace("_"," ")} | <span id="zone_heure${Emplacement.index}"></span> | <span id="zone_meteo${Emplacement.index}"></span> </div>${Emplacement.prix}€
+                <div class="InfoDestination">${Emplacement.tag.replace("_"," ")} | <span id="zone_heure${Emplacement.numero}"></span> | <span id="zone_meteo${Emplacement.numero}"></span> </div>${Emplacement.prix}€
                 </div>
                 // <a class="add-panier" id="panier" >Ajouter au panier</a>
                 <a  id = "reserver" href="reservation.html?id=${Emplacement.index}" onclick = "clearCart()">Réserver</a>
@@ -138,7 +126,7 @@ curseurMin.addEventListener('mousemove', function() {   //filtrage à chaque mod
             );}
         }
     });
-    displayDestinations(filteredDestination);
+    displayBarDestinations(filteredDestination);
 });
 curseurMax.addEventListener('mousemove', function() {
     
@@ -149,7 +137,7 @@ curseurMax.addEventListener('mousemove', function() {
                 );}
         }
     });
-    displayDestinations(filteredDestination);  
+    displayBarDestinations(filteredDestination);  
 });
 
 //Recherche par ordre de tri
