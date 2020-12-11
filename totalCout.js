@@ -44,7 +44,7 @@ function verifForm(){ //fonction qui vérifie que les 2 conditions de réservati
     return true
 }}
 
-let listeInfoVoyage = document.querySelector("#infosVoyageReserver"); //afficheur des voyages réservés DEPUIS LA RESEVATION DIRECTE
+let listeInfoVoyage = document.querySelector("#infosVoyageReserver"); //afficheur des voyages réservés DEPUIS LA RESERVATION DIRECTE
   const displayReserveDestinations = (produits) => {
   produits.map(Emplacement => {
   listeInfoVoyage.innerHTML += `
@@ -60,7 +60,7 @@ let listeInfoVoyage = document.querySelector("#infosVoyageReserver"); //afficheu
 }
 
 const produitReserver = produits.filter((Emplacement) => {  //fonction pour faire la réservation directe (depuis la page principale ou la carte du monde)
-  if (Emplacement.index == sejour_id){
+  if (Emplacement.numero == sejour_id){
     clearCart();
     return(
       Emplacement.tag.toLowerCase()
