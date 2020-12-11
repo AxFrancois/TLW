@@ -23,7 +23,6 @@ cartItems = JSON.parse(cartItems);
 let listeInfoVoyage = document.querySelector("#infosVoyageReserver");
 if(cartItems && listeInfoVoyage) {
   Object.values(cartItems).map(item => {
-<<<<<<< HEAD
      listeInfoVoyage.innerHTML += `
      
      <div class ="produitReservation">
@@ -36,21 +35,6 @@ if(cartItems && listeInfoVoyage) {
       `
   });
 }
-=======
-  listeInfoVoyage.innerHTML += `
-     
-    <div class ="produitReservation">
-      <img src ="./Photos/${item.tag}.jpg">
-    </div>
-  <div class ="prixVoyage">${item.prix},00€</div>
-  <div class ="nomVoyage">
-    <span>Vous avez réservé ${item.inPanier} ${item.name}</span>
-  </div>
-`
-});
-}
-
->>>>>>> ed2147c311885dbffb07b4cb4f9b72199f5f8d3a
 if (recap('petit_dejeuner') == 'on'){
 
    petitDejeuner = "Option : Petit déjeuner" ;
