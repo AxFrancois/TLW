@@ -175,10 +175,9 @@ function PanierVide(){  //fonction qui permet de bloquer le bouton resserver s'i
         bt.disabled = true;
     }
     else {
-        bt.disabled = false;
+        bt.disabled = true;
     }
 }
-
 
 rechargementArticleNumbers();
 displayCart();

@@ -31,7 +31,7 @@ document.getElementById(idInput[i]).addEventListener('input', function() {
 });}
 
 function verifForm(){ //fonction qui vérifie que les 2 conditions de réservations : pas d'enfant seul et date de retour postérieur à date de départ, se lance au clic de bouton valdier
-  if(dateDepart > dateRetour){
+  if(dateDepart >= dateRetour){
     alert(`La date de retour doit être posterieur à la date de départ`);
     return false
          }
