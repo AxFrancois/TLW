@@ -170,6 +170,14 @@ div.produit{
    
 }
 
+.produitTexte{
+    width: 100px;
+    height: 125px;
+    display: flex;
+    text-align: center;
+    align-items: center;
+}
+
 .panierTotalTitre{
     width: 30%;
 
