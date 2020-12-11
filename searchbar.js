@@ -73,8 +73,8 @@ const displayDestinations = (produits) => { //fonction permettant d'afficher les
                 <div class="Overlay">
                 <div class="InfoDestination">${Emplacement.tag.replace("_"," ")} | <span id="zone_heure${Emplacement.numero}"></span> | <span id="zone_meteo${Emplacement.numero}"></span> </div>${Emplacement.prix}€
                 </div>
-                <a id="video" >Vidéo</a>
-                <a  id = "reserver" href="reservation.html?id=${Emplacement.numero}" onclick = "clearCart()">Réserver</a>
+                <a id= "video" href="${Emplacement.video}"  target="_blank" >Vidéo</a>
+                <a id = "reserver" href="reservation.html?id=${Emplacement.numero}" onclick = "clearCart()">Réserver</a>
                 </div>
             </li>
         `
