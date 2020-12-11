@@ -3,11 +3,12 @@
 Ce site web a été fait avec Alex Pincemin en 3ème année d'école d'ingénieur à CPE Lyon
 La construction du site a été divisée en 6 séances de 4 heures chacune, et complétés avec du tempsd de travail personnel.
 
-Choses que nous n'avons pas réussi à faire : 
+Choses que nous n'avons pas réussi à faire/problèmes encore présent : 
 -lors du tri par prix, la température et l'heure ne s'affichent plus
 -nous n'avons pas réussi à afficher dynamiquement les points sur le svg
 -dans le récapitulatif la destination n'apparait pas
 -de temps en temps jquery n'arrive pas a charger et le bouton retour en haut de page bug
+-si on apelle les api trop fréquement (en rechargeant la page), elles ne répondent plus et laissent un champs vide
 
 
 Voici le cahier des charges de ce projet : 
