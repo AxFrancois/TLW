@@ -29,55 +29,55 @@
   <g>
 
   <!-- Paris -->
-  <a class="ancre" href="reservation.html?id=1"  target="_blank">
+  <a  href="reservation.html?id=1"  target="_blank">
   <circle cx="2080" cy="510" r="20" stroke="orange" stroke-width="3" fill="red" />
   <text x="2100" y="520" font-family="'Lucida Sans" font-size="35" fill="black" >Paris</text>
   </a>
 
   <!-- Istanbul -->
-  <a class="ancre" href="reservation.html?id=2"  target="_blank" > 
+  <a  href="reservation.html?id=2"  target="_blank" > 
   <circle cx="2400" cy="610" r="20" stroke="orange" stroke-width="3" fill="red" />
   <text x="2420" y="620" font-family="'Lucida Sans" font-size="35" fill="black">Istanbul</text>
   </a>
 
   <!-- Carcassonne -->
-  <a class="ancre" href="reservation.html?id=3"  target="_blank" >
+  <a  href="reservation.html?id=3"  target="_blank" >
   <circle cx="2090" cy="570" r="20" stroke="orange" stroke-width="3" fill="red" />
   <text x="2110" y="580" font-family="'Lucida Sans" font-size="35" fill="black">Carcassonne</text>
   </a>
 
   <!-- Allemagne -->
-  <a class="ancre" href="reservation.html?id=4"  target="_blank" >
+  <a  href="reservation.html?id=4"  target="_blank" >
   <circle cx="2180" cy="480" r="20" stroke="orange" stroke-width="3" fill="red" />
   <text x="2200" y="490" font-family="'Lucida Sans" font-size="35" fill="black">Allemagne</text>
   </a>
 
   <!-- Australie -->
-  <a class="ancre" href="reservation.html?id=5"  target="_blank" >
+  <a  href="reservation.html?id=5"  target="_blank" >
   <circle cx="3870" cy="1700" r="20" stroke="orange" stroke-width="3" fill="red" />
   <text x="3890" y="1710" font-family="'Lucida Sans" font-size="35" fill="black">Australie</text>
   </a>
 
   <!-- Barcelone -->
-  <a class="ancre" href="reservation.html?id=6"  target="_blank" >
+  <a  href="reservation.html?id=6"  target="_blank" >
   <circle cx="2080" cy="610" r="20" stroke="orange" stroke-width="3" fill="red" />
   <text x="2100" y="620" font-family="'Lucida Sans" font-size="35" fill="black">Barcelone</text>
   </a>
 
   <!-- Crète -->
-  <a class="ancre" href="reservation.html?id=7"  target="_blank" >
+  <a  href="reservation.html?id=7"  target="_blank" >
   <circle cx="2360" cy="700" r="20" stroke="orange" stroke-width="3" fill="red" />
   <text x="2380" y="710" font-family="'Lucida Sans" font-size="35" fill="black">Crète</text>
   </a>
 
   <!-- Japon -->
-  <a class="ancre" href="reservation.html?id=8"  target="_blank" >
+  <a  href="reservation.html?id=8"  target="_blank" >
   <circle cx="3730" cy="680" r="20" stroke="orange" stroke-width="3" fill="red" />
   <text x="3750" y="690" font-family="'Lucida Sans" font-size="35" fill="black">Japon</text>
   </a>
 
   <!-- NY -->
-  <a class="ancre" href="reservation.html?id=9"  target="_blank" >
+  <a  href="reservation.html?id=9"  target="_blank" >
   <circle cx="1170" cy="610" r="20" stroke="orange" stroke-width="3" fill="red" />
   <text x="1190" y="620" font-family="'Lucida Sans" font-size="35" fill="black">New-York</text>
   </a>

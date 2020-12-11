@@ -22,12 +22,9 @@ let product6 = new myDestinations(6,'Voyage à Barcelone','Barcelone','Madrid','
 let product7 = new myDestinations(7,'Voyage à Crète','Crète','Athens','Europe',800,0)
 let product8 = new myDestinations(8,'Voyage à Japon','Japon','Tokyo','Asia',1300,0)
 let product9 = new myDestinations(9,'Voyage à New York','New_York','New_York','America',1200,0)
-<<<<<<< HEAD
+
 const produits = [product1,product2,product3,product4,product5,product6,product7,product8,product9];
 const DestinationsList = document.getElementById('Destinations');
-=======
-let produits = [product1,product2,product3,product4,product5,product6,product7,product8,product9];
->>>>>>> a13c9df44c0b8f1d037d36a29ffb327c042c4930
 
 //----------------------------Barre de recherche--------------------------------------//
 const DestinationsList = document.getElementById('Destinations');
@@ -41,7 +38,7 @@ searchBar.addEventListener('keyup', (e) => {    //détecte lorsqu'une lettre en 
             Emplacement.tag.toLowerCase().includes(searchString)    
         );
     });
-<<<<<<< HEAD
+ 
     displayBarDestinations(filteredDestination);
     
 });
@@ -68,12 +65,12 @@ const displayBarDestinations = (mesproduits) => {
  }
 // }
 const loadDestinations = async () => {
-=======
+    
     displayDestinations(filteredDestination);   //appelle la fonction displayDestinations pour afficher les destinations filtrées
-});
+};
 
 const loadDestinations = async () => {  //permet le display initial des destinations
->>>>>>> a13c9df44c0b8f1d037d36a29ffb327c042c4930
+
     displayDestinations(produits);
     
 };
@@ -87,18 +84,16 @@ const displayDestinations = (produits) => { //fonction permettant d'afficher les
                 <div class="Overlay">
                 <div class="InfoDestination">${Emplacement.tag.replace("_"," ")} | <span id="zone_heure${Emplacement.index}"></span> | <span id="zone_meteo${Emplacement.index}"></span> </div>${Emplacement.prix}€
                 </div>
-                <a class="add-panier" id="panier" href="#">Ajouter au panier</a>
+                // <a class="add-panier" id="panier" >Ajouter au panier</a>
                 <a  id = "reserver" href="reservation.html?id=${Emplacement.index}" onclick = "clearCart()">Réserver</a>
                 </div>
             </li>
-        `;
+        `
         })
         .join('');
-<<<<<<< HEAD
-=======
+
         //console.log(htmlString)   //oopsi c'est un debug code ça on dirait, on va dire que c'est un easter egg
->>>>>>> a13c9df44c0b8f1d037d36a29ffb327c042c4930
-        DestinationsList.innerHTML = htmlString;
+
 
 };
 
