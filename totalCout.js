@@ -60,7 +60,7 @@ let listeInfoVoyage = document.querySelector("#infosVoyageReserver"); //afficheu
 }
 
 const produitReserver = produits.filter((Emplacement) => {  //fonction pour faire la réservation directe (depuis la page principale ou la carte du monde)
-  if (Emplacement.index == sejour_id){
+  if (Emplacement.numero == sejour_id){
     clearCart();
     return(
       Emplacement.tag.toLowerCase()
@@ -69,7 +69,7 @@ const produitReserver = produits.filter((Emplacement) => {  //fonction pour fair
 displayReserveDestinations(produitReserver)
 
 
-let cartItems = localStorage.getItem("produitsInPanier"); //afficheur des voyages réservés DEPUIS LA RESEVATION DIRECTE
+let cartItems = localStorage.getItem("produitsInPanier"); //afficheur des voyages réservés DEPUIS LE PANIER
 cartItems = JSON.parse(cartItems);
 if(cartItems && listeInfoVoyage) {
   Object.values(cartItems).map(item => {

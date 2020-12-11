@@ -73,8 +73,8 @@ const displayDestinations = (produits) => { //fonction permettant d'afficher les
                 <div class="Overlay">
                 <div class="InfoDestination">${Emplacement.tag.replace("_"," ")} | <span id="zone_heure${Emplacement.numero}"></span> | <span id="zone_meteo${Emplacement.numero}"></span> </div>${Emplacement.prix}€
                 </div>
-                <a id= "video" href="${Emplacement.video}"  target="_blank" >Vidéo</a>
-                <a id = "reserver" href="reservation.html?id=${Emplacement.numero}" onclick = "clearCart()">Réserver</a>
+                <a id="video" >Vidéo</a>
+                <a  id = "reserver" href="reservation.html?id=${Emplacement.numero}" onclick = "clearCart()">Réserver</a>
                 </div>
             </li>
         `
@@ -127,7 +127,7 @@ curseurMin.addEventListener('mousemove', function() {   //filtrage à chaque mod
             );}
         }
     });
-    displayDestinations(filteredDestination);
+    displayBarDestinations(filteredDestination);
 });
 curseurMax.addEventListener('mousemove', function() {
     
@@ -138,22 +138,21 @@ curseurMax.addEventListener('mousemove', function() {
                 );}
         }
     });
-    displayDestinations(filteredDestination);  
+    displayBarDestinations(filteredDestination);  
 });
 
 //Recherche par ordre de tri
 function sortPrice(){
     if (document.getElementById('priceSelect').value == "croissant"){
-        produits.sort(function(a, b){
+        produitCroissant = produits.sort(function(a, b){
         return a.prix - b.prix;
         });
-        console.log(produits)
-        displayDestinations(produits)
+        displayBarDestinations(produitCroissant)
 }   else if (document.getElementById('priceSelect').value == "decroissant"){
         produits.sort(function(a, b){
         return b.prix - a.prix;
         });
-        displayDestinations(produits)
+        displayBarDestinations(produits)
 }
 }
 
