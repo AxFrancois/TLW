@@ -73,7 +73,11 @@ const displayDestinations = (produits) => { //fonction permettant d'afficher les
                 <div class="InfoDestination">${Emplacement.tag.replace("_"," ")} | <span id="zone_heure${Emplacement.numero}"></span> | <span id="zone_meteo${Emplacement.numero}"></span> </div>${Emplacement.prix}€
                 </div>
                 <a class="add-panier" id="panier" >Ajouter au panier</a>
+<<<<<<< HEAD
+                <a  id = "reserver" href="reservation.html?id=${Emplacement.index}" onclick = "clearCart()">Réserver</a>
+=======
                 <a  id = "reserver" href="reservation.html?id=${Emplacement.numero}" onclick = "clearCart()">Réserver</a>
+>>>>>>> 00e3cccdb6a0efb2dad0688e449a5253210b65b5
                 </div>
             </li>
         `
