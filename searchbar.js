@@ -127,7 +127,7 @@ curseurMin.addEventListener('mousemove', function() {   //filtrage à chaque mod
             );}
         }
     });
-    displayBarDestinations(filteredDestination);
+    displayDestinations(filteredDestination);
 });
 curseurMax.addEventListener('mousemove', function() {
     
@@ -138,21 +138,22 @@ curseurMax.addEventListener('mousemove', function() {
                 );}
         }
     });
-    displayBarDestinations(filteredDestination);  
+    displayDestinations(filteredDestination);  
 });
 
 //Recherche par ordre de tri
 function sortPrice(){
     if (document.getElementById('priceSelect').value == "croissant"){
-        produitCroissant = produits.sort(function(a, b){
+        produits.sort(function(a, b){
         return a.prix - b.prix;
         });
-        displayBarDestinations(produitCroissant)
+        console.log(produits)
+        displayDestinations(produits)
 }   else if (document.getElementById('priceSelect').value == "decroissant"){
         produits.sort(function(a, b){
         return b.prix - a.prix;
         });
-        displayBarDestinations(produits)
+        displayDestinations(produits)
 }
 }
 
