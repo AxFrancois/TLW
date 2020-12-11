@@ -1,6 +1,6 @@
 //----------------------------Classe pour les destinations--------------------------------------//
 class myDestinations{
-    constructor(numero, name,tag,fuseau,continent,prix,inPanier){
+    constructor(numero, name,tag,fuseau,continent,prix,inPanier, video){
         this.numero = numero;
         this.name = name;
         this.tag = tag;
@@ -8,20 +8,21 @@ class myDestinations{
         this.continent = continent;
         this.prix = prix;
         this.inPanier = inPanier
+        this.video = video
     }
 }
 
 //----------------------------Création des destionations--------------------------------------//
 
-let product1 = new myDestinations(1,'Voyage à Paris','Paris' ,'Paris','Europe',150,0)
-let product2 = new myDestinations(2,'Voyage à Istanbul','Istanbul','Istanbul','Asia',600,0)
-let product3 = new myDestinations(3,'Voyage à Carcassonne','Carcassonne','Paris','Europe',350,0)
-let product4 = new myDestinations(4,'Voyage à Allemagne','Allemagne','Berlin','Europe',400,0)
-let product5 = new myDestinations(5,'Voyage à Australie','Australie','Sydney','Australia',1300,0)
-let product6 = new myDestinations(6,'Voyage à Barcelone','Barcelone','Madrid','Europe',500,0)
-let product7 = new myDestinations(7,'Voyage à Crète','Crète','Athens','Europe',800,0)
-let product8 = new myDestinations(8,'Voyage à Japon','Japon','Tokyo','Asia',1300,0)
-let product9 = new myDestinations(9,'Voyage à New York','New_York','New_York','America',1200,0)
+let product1 = new myDestinations(1,'Voyage à Paris','Paris' ,'Paris','Europe',150,0, "https://www.youtube.com/watch?v=B-8fXb8tts0")
+let product2 = new myDestinations(2,'Voyage à Istanbul','Istanbul','Istanbul','Asia',600,0, "https://www.youtube.com/watch?v=6nGoj2TVe2I")
+let product3 = new myDestinations(3,'Voyage à Carcassonne','Carcassonne','Paris','Europe',350,0, "https://www.youtube.com/watch?v=67p9dE9yy1c")
+let product4 = new myDestinations(4,'Voyage à Allemagne','Allemagne','Berlin','Europe',400,0, "https://www.youtube.com/watch?v=l_JL24u3hpo")
+let product5 = new myDestinations(5,'Voyage à Australie','Australie','Sydney','Australia',1300,0, "https://www.youtube.com/watch?v=HqeSK_x9jqM")
+let product6 = new myDestinations(6,'Voyage à Barcelone','Barcelone','Madrid','Europe',500,0, "https://www.youtube.com/watch?v=aL4PLre3MpA")
+let product7 = new myDestinations(7,'Voyage à Crète','Crète','Athens','Europe',800,0, "https://www.youtube.com/watch?v=5Q4HkxjN4yY")
+let product8 = new myDestinations(8,'Voyage à Japon','Japon','Tokyo','Asia',1300,0, "https://www.youtube.com/watch?v=x6t6dKe8mos")
+let product9 = new myDestinations(9,'Voyage à New York','New_York','New_York','America',1200,0, "https://www.youtube.com/watch?v=MtCMtC50gwY")
 
 const produits = [product1,product2,product3,product4,product5,product6,product7,product8,product9];
 
