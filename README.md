@@ -1,6 +1,6 @@
 # Website-TLW
 
-Ce site web a été fait avec Alex Pincemin en 3ème année d'école d'ingénieur à CPE Lyon
+Ce site web a été fait avec Alexis Pincemin en 3ème année d'école d'ingénieur à CPE Lyon
 La construction du site a été divisée en 6 séances de 4 heures chacune, et complétés avec du tempsd de travail personnel.
 
 Choses que nous n'avons pas réussi à faire/problèmes encore présent : 
